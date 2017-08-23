@@ -1,0 +1,35 @@
+.content-admin-holder {
+    margin-bottom: 10px!important;
+}
+
+.nav-log-tex{
+    color: #01a9ac!important;
+}
+
+.nav-log-tex:hover{
+    color: #01a9ac!important;
+}
+
+.nav-log-img {
+    width: 64px;
+    position: relative;
+    top: -5px;
+}
+
+.hidden-content {
+    background: #dadada;
+}
+
+.table-header {
+    background: #475058;
+    color: #fff;
+    font-weight: bold;
+}
+.panel-title {
+    width: 100%;
+}
+
+.admin-btn:hover {
+    cursor: pointer!important;
+    text-decoration: none;
+}
