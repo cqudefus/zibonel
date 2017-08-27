@@ -3,19 +3,17 @@
   <?php $globalContact = \berkaPhp\database\table\GlobalModel::getContacts() ?>
 	<div class="container">
 			<div class="row">
-
 				<div class="col-md-3 text-center">
 					<!-- Widget - Logo -->
 					<div class="widget widget-logo">
 						<img class="logo logo-dark" src="/Views/Default/Assets/favicon_152x152.png"  alt="Radio Zibonele FM">
 					</div>
-					<div class="widget widget-follow">
-						<a href="#" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="icon icon-circle icon-google-plus icon-xs"><i class="fa fa-google-plus"></i></a>
-					</div>
+            <div class="widget widget-follow">
+                <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
+                <a href="<?= $globalContact['twitter']?>" target="_blank" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
+                <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-google-plus icon-xs"><i class="fa fa-google-plus"></i></a>
+            </div>
 				</div>
-
 				<div class="col-md-9">
 					<div class="feature boxed bg-primary rounded mb-60">
 						<div class="row">
@@ -52,29 +50,16 @@
                     <div class="twitter-feed" data-count="3"></div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="widget widget-follow">
-                    <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
-                    <a href="<?= $globalContact['twitter']?>" target="_blank" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
-                    <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-google-plus icon-xs"><i class="fa fa-google-plus"></i></a>
-                </div>
-            </div>
-
 						<div class="col-md-4">
 							<!-- Widget - Contact Form -->
 							<div class="widget widget-contact-form">
-								<h6 class="text-uppercase text-muted">Write to Us</h6>
-								<form class="contact-form form-validate" id="contact-form-2">
-									<input name="name" id="name" type="text" class="form-control input-sm" placeholder="Name">
-									<input name="email" id="email" type="text" class="form-control input-sm" placeholder="E-mail address">
-									<textarea name="message" id="message" cols="30" rows="4" class="form-control input-sm" placeholder="Message"></textarea>
-									<button class="btn btn-filled btn-submit btn-sm btn-block"><span>Send it <i class="i-after ti-arrow-right"></i></span></button>
-								</form>
+								<h6 class="text-uppercase text-muted">Check our Instagram</h6>
+								<!-- Widget - Instagram -->
+                <iframe src="//lightwidget.com/widgets/0d2114447e725be2b74b9b2f5f4cb603.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 			<hr class="sep-line">
 			<div class="row pt-50 pb-50">
@@ -86,7 +71,7 @@
 					<ul class="nav nav-inline nav-sm mt-10">
 						<li><a href="#">Sign Up</a></li>
 						<li><a href="#">Other products</a></li>
-						<li><a href="#">Hire me</a></li>
+						<li><a href="#">Ad Space</a></li>
 					</ul>
 				</div>
 			</div>
