@@ -42,7 +42,7 @@
 
 <div class="container">
 <!-- Logo -->
-<a class="logo-wrapper" href="index.html">
+<a class="logo-wrapper" href="/">
     <img class="logo logo-dark" src="/Views/Default/Assets/favicon_120x120.png" alt="Okno">
 </a>
 
