@@ -10,6 +10,7 @@
 <script src="/Views/Default/Layout/js/core.js"></script>
 
 <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <script>
     $app.initBerkaPhp();

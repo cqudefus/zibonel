@@ -47,7 +47,8 @@
                 <!-- Widget - Twitter -->
                 <div class="widget widget-twitter">
                     <h6 class="text-uppercase text-muted">Latest Tweets</h6>
-                    <div class="twitter-feed" data-count="3"></div>
+                    <a class="twitter-timeline" href="https://twitter.com/ZiboneleFM98" data-height="265" data-chrome="nofooter" theme="dark">Tweets by ZiboneleFM98</a>
+                    <a href="https://twitter.com/ZiboneleFM98" class="twitter-follow-button" data-show-count="false">Follow @ZiboneleFM98</a>
                 </div>
             </div>
 						<div class="col-md-4">
@@ -56,7 +57,8 @@
 								<h6 class="text-uppercase text-muted">Check our Instagram</h6>
 								<!-- Widget - Instagram -->
                 <iframe src="//lightwidget.com/widgets/0d2114447e725be2b74b9b2f5f4cb603.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-							</div>
+                <a href="https://www.instagram.com/zibonelefm/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+              </div>
 						</div>
 					</div>
 				</div>
