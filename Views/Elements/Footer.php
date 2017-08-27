@@ -18,10 +18,10 @@
 					<div class="feature boxed bg-primary rounded mb-60">
 						<div class="row">
 							<div class="col-sm-6">
-								<h5 class="mb-0"><i class="ti-mobile i-before text-dark"></i>Call Us! +48 210 221 221</h5>
+								<h5 class="mb-0"><i class="ti-mobile i-before text-dark"></i>Call Us!&nbsp;<?= $globalContact['tell']?></h5>
 							</div>
 							<div class="col-sm-6">
-								<h5 class="mb-0"><i class="ti-email i-before text-dark"></i>Write to Us! hello@example.mail</h5>
+								<h5 class="mb-0"><i class="ti-email i-before text-dark"></i>Write to Us!&nbsp;<?= $globalContact['email']?></h5>
 							</div>
 						</div>
 					</div>
