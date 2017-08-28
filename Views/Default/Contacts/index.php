@@ -9,7 +9,7 @@
                         <strong>Address:</strong><br>
                         <?=$data["street_number"]?>, <?=$data["street_name"]?>, <?=$data["suburb_name"]?>
                         <br/>Cape Town <br/><br/>
-                        <strong>Phone:</strong><br>
+                        <strong>Phone:</strong><br>s
                         <?=$data["tell"]?>,<?=$data["cellphone"]?>
                         <br><br>
                         <strong>E-mail:</strong><br>
@@ -39,6 +39,7 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
