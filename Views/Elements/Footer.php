@@ -11,7 +11,7 @@
             <div class="widget widget-follow">
                 <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
                 <a href="<?= $globalContact['twitter']?>" target="_blank" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
-                <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-google-plus icon-xs"><i class="fa fa-google-plus"></i></a>
+                <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-instagram icon-xs"><i class="fa fa-instagram"></i></a>
             </div>
 				</div>
 				<div class="col-md-9">
@@ -66,13 +66,13 @@
 			<hr class="sep-line">
 			<div class="row pt-50 pb-50">
 				<div class="col-sm-6 text-muted">
-					Copyright Okno 2016©. All rights reserved.<br>
-					Made with love by suelo.pl
+					Copyright 2017 ©. All rights reserved.<br>
+					 Made with love by <a href="www.cqudefus.com"> Cqudefus</a>
 				</div>
 				<div class="col-sm-6 text-right">
 					<ul class="nav nav-inline nav-sm mt-10">
-						<li><a href="#">Sign Up</a></li>
-						<li><a href="#">Other products</a></li>
+						<!--<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Other products</a></li>-->
 						<li><a href="#">Ad Space</a></li>
 					</ul>
 				</div>
