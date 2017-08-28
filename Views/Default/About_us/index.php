@@ -27,23 +27,25 @@
             </div>
         </div>
     </div>
+
+    <!--I need you guys to add these-->
     <div class="image col-md-6">
         <div class="bg-image zooming"><img src="Assets\examples-pictures.jps" alt=""></div>
     </div>
+
+    <section id="clients">
+        <div class="container text-center">
+            <h6 class="text-uppercase text-spacing mb-60">Our Sponsors</h6>
+            <div class="carousel" data-single-item="true" data-transition="fade" data-autoplay="3000">
+                <a href="#"><img class="gray-to-color mb-50" src="Assets/logotypes/sass.png" alt=""></a>
+                <a href="#"><img class="gray-to-color mb-50" src="Assets/logotypes/envato.png" alt=""></a>
+                <a href="#"><img class="gray-to-color mb-50" src="Assets/logotypes/suelo.png" alt=""></a>
+                <a href="#"><img class="gray-to-color mb-50" src="Assets/logotypes/html.png" alt=""></a>
+            </div>
+        </div>
+    </section>
 <!--</section>-->
 <?php endforeach ?>
-
-<section id="clients">
-    <div class="container text-center">
-        <h6 class="text-uppercase text-spacing mb-60">Our Sponsors</h6>
-        <div class="carousel" data-single-item="true" data-transition="fade" data-autoplay="3000">
-            <a href="#"><img class="gray-to-color mb-50" src="assets/img/logotypes/sass.png" alt=""></a>
-            <a href="#"><img class="gray-to-color mb-50" src="assets/img/logotypes/envato.png" alt=""></a>
-            <a href="#"><img class="gray-to-color mb-50" src="assets/img/logotypes/suelo.png" alt=""></a>
-            <a href="#"><img class="gray-to-color mb-50" src="assets/img/logotypes/html.png" alt=""></a>
-        </div>
-    </div>
-</section>
 
 <script>
 //	$app.initList();

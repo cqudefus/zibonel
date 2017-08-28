@@ -67,7 +67,8 @@
 			<div class="row pt-50 pb-50">
 				<div class="col-sm-6 text-muted">
 					Copyright 2017 ©. All rights reserved.<br>
-					 Made with love by <a href="www.cqudefus.com"> Cqudefus</a>
+					 Made with love by <a href="http://cqudefus.com/"> Cqudefus</a>
+
 				</div>
 				<div class="col-sm-6 text-right">
 					<ul class="nav nav-inline nav-sm mt-10">
