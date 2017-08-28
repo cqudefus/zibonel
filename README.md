@@ -34,9 +34,9 @@ the has to be side picture and sponsors check directory exemple/about.html - ope
     please develop this page eg example/presenters.html  
     when someone clicks on a presenter should go to presenters.html
     
-    ##presentsprofile please develop this page example/personprofile.html
+##presentsprofile please develop this page example/personprofile.html
     
- ##event
+##event
  
  please develop this page eg example/event.html
  
