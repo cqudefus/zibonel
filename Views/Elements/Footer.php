@@ -6,7 +6,7 @@
 				<div class="col-md-3 text-center">
 					<!-- Widget - Logo -->
 					<div class="widget widget-logo">
-						<img class="logo logo-dark" src="/Views/Default/Assets/favicon_152x152.png"  alt="Radio Zibonele FM">
+						<img class="logo-dark" src="/Views/Default/Assets/footer_logo.png"  alt="Radio Zibonele FM">
 					</div>
             <div class="widget widget-follow">
                 <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
@@ -76,6 +76,5 @@
 				</div>
 			</div>
 		</div>
-
 </footer>
 <!-- Footer / End -->
