@@ -1,5 +1,7 @@
 <?php $about_us = $template_data['about_us'] ?>
 <?php foreach ($about_us as $data  ): ?>
+<!--<section>-->
+    <!--<section id="about" class="section-double fullheight bg-primary dark right">-->
     <div class="content col-md-6">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs mb-40" role="tablist">
@@ -12,7 +14,7 @@
             <div role="tabpanel" class="tab-pane active fade in" id="about_tab">
                 <!--                <h1>We are always looking for new investment horizons...</h1>-->
                 <p class="lead mb-50"><?=$data["description"]?></p>
-                <span data-target="local-scroll"><a href="#services" class="btn btn-default">Read more <i class="i-after ti-arrow-right"></i></a></span>
+                <!--<span data-target="local-scroll"><a href="#services" class="btn btn-default">Read more <i class="i-after ti-arrow-right"></i></a></span>
                 <!--                <span data-target="local-scroll"><a href="#services" class="btn btn-default">Read more <i class="i-after ti-arrow-right"></i></a></span>-->
             </div>
             <div role="tabpanel" class="tab-pane fade" id="mission_tab">
@@ -25,6 +27,10 @@
             </div>
         </div>
     </div>
+    <div class="image col-md-6">
+        <div class="bg-image zooming"><img src="assets/img/photos/classic2_photo01.jpg" alt=""></div>
+    </div>
+<!--</section>-->
 <?php endforeach ?>
 <script>
 //	$app.initList();
