@@ -6,8 +6,8 @@
     <div class="container">
         <div class="module left">
             <ul class="list-inline">
-                <li><i class="i-before ti-email text-primary"></i>hello@example.com</li>
-                <li><i class="i-before ti-mobile text-primary"></i>+48 22 212-32-21</li>
+                <li><i class="i-before ti-email text-primary"></i>info@zibonelefm.co.za</li>
+                <li><i class="i-before ti-mobile text-primary"></i>021 361 7109</li>
             </ul>
         </div>
         <div class="module right">
@@ -24,14 +24,14 @@
                 <?php endif ?>
                 <?php if(! berkaPhp\helpers\Auth::isUserLogged()):?>
                     <li class="">
-                        <a href="/users/login">login</a>
+                        <h6> <a href="/users/login">Login</a></h6>
                     </li>
                 <?php else: ?>
                     <li class="">
-                        <a href="/users/logout">logout</a> |
+                        <a href="/users/logout">Logout</a> |
                     </li>
                 <?php endif ?>
-                <li><i class="i-before ti-time text-primary"></i>Mon to Sat 08:00 - 16:30</li>
+                <!--<li>Silapho Ukhoyo</li>-->
             </ul>
         </div>
     </div>
