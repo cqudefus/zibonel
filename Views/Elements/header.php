@@ -32,6 +32,7 @@
                     </li>
                 <?php endif ?>
                 <!--<li>Silapho Ukhoyo</li>-->
+                <a href="#" class="btn-sm btn-filled btn-danger">Listen Now</a>
             </ul>
         </div>
     </div>
@@ -42,7 +43,7 @@
 
 <div class="container">
 <!-- Logo -->
-<a class="logo-wrapper" href="index.html">
+<a class="logo-wrapper" href="/">
     <img class="logo logo-dark" src="/Views/Default/Assets/favicon_120x120.png" alt="Okno">
 </a>
 
@@ -51,29 +52,68 @@
 <!-- Primary Menu -->
 <div class="module menu left">
 <ul id="nav-primary" class="nav nav-primary">
-<li class="">
-    <a href="/">Home</a>
-</li>
-<li class="">
-    <a href="/about_us">About</a>
-</li>
-<li class="">
-    <a href="/news">News</a>
-</li>
-<li class="">
-    <a href="/programs">Line-up</a>
-</li>
-<li class="">
-    <a href="#">Blog</a>
-</li>
-<li class="">
-    <a href="/contacts">Contact</a>
-</li>
+
+                <li class="has-dropdown">
+                    <a href="/">Home</a>
+                    <ul>
+                        <li><a href="/about_us">About</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="/">On Air</a>
+                    <ul>
+                        <li class="">
+                            <a href="/programs">Line Up</a>
+                        </li>
+                        <li class="">
+                            <a href="/about_us">Presenters</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="/news">News</a>
+                </li>
+
+                <li class="">
+                    <a href="#">Blog</a>
+                </li>
+
+                <li class="">
+                    <a href="/programs">Events</a>
+                </li>
+
+                <li class="">
+                    <a href="/programs">Gallery</a>
+                </li>
+<!--
+                <li class="">
+                    <a href="/programs">Advertisement</a>
+                </li>
+-->
+
+
+                <li class="">
+                    <a href="/contacts">Contact</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="">Other </a>
+                        <ul>
+                            <li class="">
+                                <a href="/programs">Advertisement</a>
+                            </li>
+
+                            <li class="">
+                                    <a href="/programs">Podcat</a>
+                            </li>
+                    </ul>
+    </li>
+
 
 </ul>
 </div>
-
-
 </nav>
 
 <!-- Menu Toggle -->
