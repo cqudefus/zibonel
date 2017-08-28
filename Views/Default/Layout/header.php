@@ -26,4 +26,3 @@
 </head>
 <body>
 <?= berkaPhp\helpers\Element::load("header")?>
-
