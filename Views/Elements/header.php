@@ -81,11 +81,11 @@
                 </li>
 
                 <li class="">
-                    <a href="/programs">Events</a>
+                    <a href="/events">Events</a>
                 </li>
 
                 <li class="">
-                    <a href="/programs">Gallery</a>
+                    <a href="/gallery">Gallery</a>
                 </li>
 <!--
                 <li class="">
