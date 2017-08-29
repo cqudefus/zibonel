@@ -25,7 +25,7 @@
 					<td data-limit-char="20"><?=$data["event_date"]?></td>
 					<td data-limit-char="20"><?=$data["event_location"]?></td>
 					<td data-limit-char="20"><?=$data["event_tickets"]?></td>
-					
+
 					<td>
 						<a href="/events/edit/<?= $data['id'] ?>">
 							<button type="button" class="btn btn-default">Edite</button>
@@ -43,6 +43,5 @@
 	</table>
 </div>
 <script>
-	$app.initList(); 
+	$app.initList();
 </script>
-
