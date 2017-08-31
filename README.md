@@ -43,3 +43,12 @@ the has to be side picture and sponsors check directory exemple/about.html - ope
 
     difference between blog and news , news as a breaking news slider and blog
     has no slider
+    
+ ##Presenters
+
+please develop this page eg example/presenters.html  
+when someone clicks on a presenter should go to presenters.html
+
+##presentsprofile
+
+please develop this page example/personprofile.html
