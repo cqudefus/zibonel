@@ -10,8 +10,8 @@
 			<!-- Image -->
 			<div class="image-box image-hover text-center">
 				<div class="image">
-					<a href="<?=$data["image_file"]?>" data-lightbox="<?=$data["image_heading"]?>" data-title="Image Title">
-						<img src="<?=$data["image_file"]?>" alt="">
+					<a href="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" data-lightbox="<?=$data["image_heading"]?>" data-title="<?=$data["image_heading"]?>">
+						<img src="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" alt="">
 					</a>
 				</div>
 				<div class="title">
