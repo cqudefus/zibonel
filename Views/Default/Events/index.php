@@ -3,7 +3,7 @@
 					<div class="masonry-item col-md-4 col-sm-6 col-xs-12">
 			        <div class="post post-boxed">
 			            <div class="post-image">
-			                <img src="/Views/Default/Assets/News/<?= $data['image']== '0' ? 'no_image.png' : $data['image']?>" width="300px" alt="">
+			                <img src="/Views/Default/Assets/Events/<?= $data['event_image']== '0' ? 'no_image.png' : $data['event_image']?>" width="300px" alt="">
 			            </div>
 			            <ul class="post-meta">
 			                <li><span>Date: </span><?=$data["event_date"]?></li>
