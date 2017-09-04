@@ -43,7 +43,7 @@ the has to be side picture and sponsors check directory exemple/about.html - ope
 
     difference between blog and news , news as a breaking news slider and blog
     has no slider
-    
+
  ##Presenters
 
 please develop this page eg example/presenters.html  
@@ -52,3 +52,5 @@ when someone clicks on a presenter should go to presenters.html
 ##presentsprofile
 
 please develop this page example/personprofile.html
+
+<div id="page-loader"><svg class="loader-1 loader-primary" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="3" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div
