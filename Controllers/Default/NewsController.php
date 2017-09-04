@@ -40,7 +40,7 @@
                 'join'=> true,
             ]);
 
-            $this->appView->set('title', 'Zibonel Fm News');
+            $this->appView->set('title', 'Zibonele FM News');
             $this->appView->set('page_title', 'Our News');
 			$this->appView->set('news', $result);
             $this->appView->set('recent_posts', $this->recent_posts);
@@ -59,7 +59,7 @@
 
 			$result = $this->model->fetchBy(['fields'=>['link'=>$link]],['join'=>true]);
 
-            $this->appView->set('title', 'Zibonel Fm News');
+            $this->appView->set('title', 'Zibonele FM News');
             $this->appView->set('page_title', ' ');
 			$this->appView->set('new',$result);
             $this->appView->set('recent_posts', $this->recent_posts);

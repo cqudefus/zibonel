@@ -20,7 +20,7 @@
 
             $result = $this->model->fetchAll();
             $this->appView->set('title', 'About Us');
-            $this->appView->set('page_title', 'About Zibonel FM');
+            $this->appView->set('page_title', 'About Zibonele FM');
             $this->appView->set('about_us', $result);
             $this->appView->render();
 
@@ -29,7 +29,7 @@
         function our_vision()
         {
             $this->appView->set('title', 'About Us');
-            $this->appView->set('page_title', 'About Zibonel FM');
+            $this->appView->set('page_title', 'About Zibonele FM');
             $this->appView->render();
 
         }

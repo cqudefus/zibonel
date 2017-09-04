@@ -18,7 +18,7 @@
 
 			$result = $this->model->fetchAll();
 
-            $this->appView->set('title', 'Zibonel Fm News');
+            $this->appView->set('title', 'Zibonele FM News');
 			$this->appView->set('news', $result);
 			$this->appView->render();
 
