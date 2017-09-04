@@ -10,7 +10,10 @@
 			parent::__construct();
 
             $this->recent_posts = $this->model->fetchAll([
-                'fields'=>['hide'=>'0'],
+                'fields'=>[
+                    'hide'=>'0',
+                    'ref_type_id'=> '2'
+                ],
                 'options'=>[
                     'order by'=>['view','DESC'],
                     'limit'=>[0, 5]
@@ -26,7 +29,10 @@
 		function index() {
 
 			$result = $this->model->fetchBy([
-                'fields'=>['news.hide'=>'0'],
+                'fields'=>[
+                    'news.hide'=>'0',
+                    'ref_type_id'=> '2'
+                ],
                 'options'=>[
                     'order by'=>['news.published_date','DESC'],
                 ]

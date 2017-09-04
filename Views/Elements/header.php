@@ -77,7 +77,7 @@
                 </li>
 
                 <li class="">
-                    <a href="#">Blog</a>
+                    <a href="/blog">Blog</a>
                 </li>
 
                 <li class="">
