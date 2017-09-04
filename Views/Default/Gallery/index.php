@@ -1,38 +1,30 @@
 <?php $gallery = $template_data['gallery'] ?>
-<br>
-<br>
-<div class="table-responsive">
-	<table class="table">
-		<thead class="thead-inverse">
-			<tr>
-				<th style='text-transform: capitalize;'>id</th>
-				<th style='text-transform: capitalize;'>image description</th>
-				<th style='text-transform: capitalize;'>image file</th>
-				<th>Options</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach ($gallery as $data  ): ?>
-				<tr>
-					<td data-limit-char="20"><?=$data["id"]?></td>
-					<td data-limit-char="20"><?=$data["image_description"]?></td>
-					<td data-limit-char="20"><?=$data["image_file"]?></td>
+<div>
+<div class="container text-center">
+	<h3>Default</h3>
+	<p class="lead mb-60">Default gallery with title under the image.</p>
 
-					<td>
-						<a href="/gallery/edit/<?= $data['id'] ?>">
-							<button type="button" class="btn btn-default">Edite</button>
-						</a>
-						<a href="/gallery/delete/<?= $data['id'] ?>">
-							<button type="button" class="btn btn-default">Delete</button>
-						</a>
-						<a href="/gallery/view/<?= $data['id'] ?>">
-							<button type="button" class="btn btn-default">View</button>
-						</a>
-					</td>
-				</tr>
-			<?php endforeach ?>
-		</tbody>
-	</table>
+	<div class="masonry row">
+		<?php foreach ($gallery as $data  ): ?>
+		<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+			<!-- Image -->
+			<div class="image-box image-hover text-center">
+				<div class="image">
+					<a href="<?=$data["image_file"]?>" data-lightbox="<?=$data["image_heading"]?>" data-title="Image Title">
+						<img src="<?=$data["image_file"]?>" alt="">
+					</a>
+				</div>
+				<div class="title">
+
+						<h5 class="mb-0"><?=$data["image_heading"]?></h5>
+						<span class="text-muted"><?=$data["image_description"]?></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<?php endforeach ?>
+	</div>
+</div>
 </div>
 <script>
 	$app.initList();

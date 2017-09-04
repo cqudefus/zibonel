@@ -18,6 +18,7 @@
 
 			$result = $this->model->fetchAll();
 			$this->appView->set('gallery', $result);
+			$this->appView->set('page_title', 'Our Gallery');
 			$this->appView->render();
 
 		}
