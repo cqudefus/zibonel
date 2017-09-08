@@ -8,11 +8,11 @@
 					<div class="widget widget-logo">
 						<img class="logo-dark" src="/Views/Default/Assets/footer_logo.png"  alt="Radio Zibonele FM">
 					</div>
-            <div class="widget widget-follow">
-                <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
-                <a href="<?= $globalContact['twitter']?>" target="_blank" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
-                <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-instagram icon-xs"><i class="fa fa-instagram"></i></a>
-            </div>
+                    <div class="widget widget-follow">
+                        <a href="<?= $globalContact['facebook']?>" target="_blank" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
+                        <a href="<?= $globalContact['twitter']?>" target="_blank" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
+                        <a href="<?= $globalContact['google']?>" target="_blank" class="icon icon-circle icon-instagram icon-xs"><i class="fa fa-instagram"></i></a>
+                    </div>
 				</div>
 				<div class="col-md-9">
 					<div class="feature boxed bg-primary rounded mb-60">
@@ -26,31 +26,31 @@
 						</div>
 					</div>
 					<div class="row">
-            <div class="col-md-4">
-                <!-- Widget - Contact -->
-                <div class="widget widget-contact">
-                    <h6 class="text-uppercase text-muted">Contact Us</h6>
-                    <address>
-                        <strong>Address:</strong><br>
-                        <?= $globalContact['street_name']?>,
-                        <?= $globalContact['street_number']?>,<br>
-                        <?= $globalContact['suburb_name']?>
-                        Cape Town<br><br>
-                        <strong>Phone:</strong><br>
-                        <?= $globalContact['tell']?><br><br>
-                        <strong>E-mail:</strong><br>
-                        <?= $globalContact['email']?><br>
-                    </address>
+                    <div class="col-md-4">
+                        <!-- Widget - Contact -->
+                        <div class="widget widget-contact">
+                            <h6 class="text-uppercase text-muted">Contact Us</h6>
+                            <address>
+                                <strong>Address:</strong><br>
+                                <?= $globalContact['street_name']?>,
+                                <?= $globalContact['street_number']?>,<br>
+                                <?= $globalContact['suburb_name']?>
+                                Cape Town<br><br>
+                                <strong>Phone:</strong><br>
+                                <?= $globalContact['tell']?><br><br>
+                                <strong>E-mail:</strong><br>
+                                <?= $globalContact['email']?><br>
+                            </address>
+                        </div>
+                    </div>
+                <div class="col-md-4">
+                    <!-- Widget - Twitter -->
+                    <div class="widget widget-twitter">
+                        <h6 class="text-uppercase text-muted">Latest Tweets</h6>
+                        <a class="twitter-timeline" href="https://twitter.com/ZiboneleFM98" data-height="265" data-chrome="nofooter" theme="dark">Tweets by ZiboneleFM98</a>
+                        <a href="https://twitter.com/ZiboneleFM98" class="twitter-follow-button" data-show-count="false">Follow @ZiboneleFM98</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <!-- Widget - Twitter -->
-                <div class="widget widget-twitter">
-                    <h6 class="text-uppercase text-muted">Latest Tweets</h6>
-                    <a class="twitter-timeline" href="https://twitter.com/ZiboneleFM98" data-height="265" data-chrome="nofooter" theme="dark">Tweets by ZiboneleFM98</a>
-                    <a href="https://twitter.com/ZiboneleFM98" class="twitter-follow-button" data-show-count="false">Follow @ZiboneleFM98</a>
-                </div>
-            </div>
 						<div class="col-md-4">
 							<!-- Widget - Contact Form -->
 							<div class="widget widget-contact-form">

@@ -24,8 +24,13 @@
         <?php endif ?>
     </div>
 </div>
-<div class="sidebar col-md-3">
+<div class="sidebar news-view col-md-3">
     <?= \berkaPhp\helpers\Element::load('RecentPosts', 'Default', $recent_posts) ?>
+    <div class="widget widget-twitter">
+        <h6 class="text-uppercase text-muted">Latest Tweets</h6>
+        <?= \berkaPhp\helpers\Element::load('TwitterFeeds') ?>
+    </div>
+
 </div>
 <script>
     zibonel.initLoadComment();

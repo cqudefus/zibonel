@@ -72,6 +72,7 @@
 				}
 			}
 			$this->appView->set('tables',$this->genarator->getTables());
+            $this->appView->set('page_title', 'Auto Generate Files');
 			$this->appView->render();
 		}
 

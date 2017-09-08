@@ -67,7 +67,7 @@
                             <a href="/programs">Line Up</a>
                         </li>
                         <li class="">
-                            <a href="/about_us">Presenters</a>
+                            <a href="/presenters">Presenters</a>
                         </li>
                     </ul>
                 </li>

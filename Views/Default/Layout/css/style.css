@@ -84,6 +84,14 @@ section.cover {
     /*font-size: 14px;*/
 }
 
+.timeline-Header-title {
+    display: none;
+}
+
+.news-view .widget-twitter iframe:first-of-type {
+    height: 650px!important;
+}
+
 .live-img {
     border-radius: 10px 10px 0 0;
     width: 150px;
