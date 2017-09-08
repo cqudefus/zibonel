@@ -16,7 +16,7 @@
 
 		function index() {
 
-            $this->appView->set('title', 'Zibonel FM');
+            $this->appView->set('title', 'Zibonele FM');
 			$this->appView->set('show_breadcrumb', false);
             $this->appView->set('home', false);
 			$this->appView->render();

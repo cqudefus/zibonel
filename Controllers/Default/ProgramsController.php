@@ -25,8 +25,8 @@
 
             $result = \zibonale\helpers\DB::extractRows($result);
             //print_r($result);
-            $this->appView->set('title', 'Zibonel FM Programs');
-            $this->appView->set('page_title', 'Zibonel FM Programs');
+            $this->appView->set('title', 'Zibonele FM Programs');
+            $this->appView->set('page_title', 'Zibonele FM Programs');
 			$this->appView->set('programs', $result);
 			$this->appView->render();
 

@@ -24,7 +24,7 @@
                 }
             }
 
-            $this->appView->set('title', 'Zibonel Fm Contacts');
+            $this->appView->set('title', 'Zibonele FM Contacts');
 
 			$result = $this->model->fetchAll();
 			$this->appView->set('contacts', $result);

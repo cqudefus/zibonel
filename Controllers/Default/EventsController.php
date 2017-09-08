@@ -18,6 +18,7 @@
 
 			$result = $this->model->fetchAll();
 			$this->appView->set('events', $result);
+			$this->appView->set('page_title', 'Our Events');
 			$this->appView->render();
 
 		}
@@ -93,6 +94,7 @@
 
 			$result = $this->model->fetchBy(['fields'=>['id'=>$id]]);
 			$this->appView->set('event',$result);
+			$this->appView->set('page_title', 'Our Events');
 			$this->appView->render();
 		}
 

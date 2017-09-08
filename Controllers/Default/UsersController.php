@@ -63,7 +63,7 @@
                 }
             }
 
-            $this->appView->set('title', 'Zibonel FM | Login');
+            $this->appView->set('title', 'Zibonele FM | Login');
             $this->appView->set('page_title', 'login');
             $this->appView->render();
 

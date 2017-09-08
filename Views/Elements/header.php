@@ -32,7 +32,7 @@
                     </li>
                 <?php endif ?>
                 <!--<li>Silapho Ukhoyo</li>-->
-                <a href="#" class="btn-sm btn-filled btn-danger">Listen Now</a>
+                <a href="#" class="btn btn-xs btn-filled btn-danger">Listen Now <i class="fa fa-microphone"></i></a>
             </ul>
         </div>
     </div>
@@ -106,7 +106,7 @@
                             </li>
 
                             <li class="">
-                                    <a href="/programs">Podcat</a>
+                                    <a href="/programs">Podcast</a>
                             </li>
                     </ul>
     </li>

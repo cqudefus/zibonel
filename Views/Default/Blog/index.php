@@ -21,4 +21,3 @@
 <script>
     zibonel.initEqualizer();
 </script>
-
