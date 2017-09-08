@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-6">
-        <div><img src="/Views/Default/Assets/img/photos/classic2_photo01.jpg" alt=""></div>
+        <div><img src="/Views/Default/Assets/img/photos/classic2_photo01.jpg" alt="" style="border-radius: 5px;"></div>
     </div>
 
 <?php endforeach ?>

@@ -17,7 +17,7 @@
                     <a class="welcome">Welcome <?=berkaPhp\helpers\Auth::getActiveUser(false,'user_name')?></a> |
                 </li>
                 <?php endif ?>
-                <?php if(berkaPhp\helpers\Auth::getActiveUser(false,'user_ref_role') == 2):?>
+                <?php if(berkaPhp\helpers\Auth::getActiveUser(false,'user_ref_role') == 2 || berkaPhp\helpers\Auth::getActiveUser(false,'user_ref_role') == 1):?>
                 <li class="">
                     <a href="/admin/pages" target="_blank">Go To Admin area</a> |
                 </li>
