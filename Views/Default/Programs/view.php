@@ -8,9 +8,9 @@
 	<input type="text" readonly class="form-control" name="pr_ref_day" value="<?=$data["pr_ref_day"]?>"><br>
 	<label style='text-transform: capitalize;'>pr ref time</label><br>
 	<input type="text" readonly class="form-control" name="pr_ref_time" value="<?=$data["pr_ref_time"]?>"><br>
-	<label style='text-transform: capitalize;'>pr description</label><br>
+	<!--<label style='text-transform: capitalize;'>pr description</label><br>
 	<input type="text" readonly class="form-control" name="pr_description" value="<?=$data["pr_description"]?>"><br>
-	
+	-->
 	<input type="hidden" name="pr_id" value="<?=$data['pr_id']?>">
 	<a href="/programs" class="btn btn-primary">Go Back</a>
 </form>
