@@ -23,66 +23,6 @@
 
 		}
 
-        /* Add presenter into database
-        *  Getting data from Post
-        *  @author berkaPhp
-        */
-
-		function add() {
-
-			if($this->is_set($this->getPost())) {
-				if ($this->model->add($this->getPost())) {
-					$this->appView->set('message', ['success'=>'Saved presenter']);
-				} else {
-					$this->appView->set('message', ['error'=>' Could not Saved presenter !']);
-				}
-			}
-
-			$this->appView->render();
-		}
-
-        /* Edit presenter and update the table
-        *  Getting data from Post
-        *  Id from params array
-        *  @author berkaPhp
-        */
-
-		function edit($params) {
-
-			$id = $params['params'];
-
-			if($this->is_set($this->getPost())) {
-				if ($this->model->update($this->getPost())) {
-					$this->appView->set('message', ['success'=>'Edited presenter']);
-				} else {
-					$this->appView->set('message', ['error'=>' Could not Edit presenter !']);
-				}
-			}
-
-			$result = $this->model->fetchBy(['fields'=>['pr_id'=>$id]]);
-			$this->appView->set('presenter',$result);
-			$this->appView->render();
-		}
-
-        /* Delete presenter from the table
-        *  Getting presenter Id from params array
-        *  @author berkaPhp
-        */
-
-		function delete($params) {
-
-			$id = $params['params'];
-
-			if($this->model->delete($id)) {
-				$this->appView->set('message', ['success'=>'Deleted presenter']);
-			} else {
-				$this->appView->set('message', ['error'=>' Could not Delete presenter !']);
-			}
-
-			$this->index();
-
-		}
-
         /* Viewing presenter from the table
         *  Getting presenter Id from params array
         *  @author berkaPhp

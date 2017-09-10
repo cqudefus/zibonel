@@ -30,7 +30,7 @@
                                 </dl>
                             </div>
                         </div>
-                        <p><?=\berkaPhp\helpers\Str::limitChar($presenter['who_am_i'], 100, '') ?></p>
+                        <p><?=\berkaPhp\helpers\Str::limitChar($presenter['who_am_i'], 150, '') ?></p>
                         <hr class="sep-line sep-2 mb-30 mt-30">
 
                     <!--    <div class="widget widget-follow">
