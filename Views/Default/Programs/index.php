@@ -26,9 +26,9 @@
                             </p>
                             <span class="tag1"></span>
                         </div>
-                        <div class="description">
+                       <!-- <div class="description">
                             <p><?= \berkaPhp\helpers\Str::limitChar($data['bc_description'], 200, '...') ?> </p>
-                        </div>
+                        </div>-->
                         <div class="product-info smart-form">
                             <div class="row">
                                 <div class="col-md-12">

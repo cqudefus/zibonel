@@ -210,7 +210,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .contact_us i {
     font-size: 14px;
-    color: #2e9557;
+    color: #01a9ac;
 }
 
 .contact_us{
@@ -924,6 +924,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     padding-bottom: 66.6666667%;
     height: 0;
 }
+
 .mapWrapper iframe {
     position: absolute;
     top: 0;
@@ -931,3 +932,34 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     width: 100%;
     height: 50%;
 }
+
+@media only screen and (max-width:800px) {
+    .owl-wrapper, .owl-carousel, .owl-wrapper-outer {
+        height: 100vh!important;
+    }
+    
+    .carousel {
+        height: 100vh!important;
+    }
+    
+    .owl-carousel.owl-item, .owl-carousel.owl-wrapper {
+        height: 100vh!important;
+    }
+
+    .h-lg {
+        height: 100vh!important; 
+    }
+
+    .home-text {
+        top: 138px!important;
+        text-align: center;
+    }
+
+    .banner-text {
+        font-size: 30px;
+    }
+}
+
+.banner-text {
+    text-shadow: 1px -1px 5px #079496;
+ }

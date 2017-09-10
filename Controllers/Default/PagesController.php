@@ -16,9 +16,23 @@
 
 		function index() {
 
+            $news = $this->loadModel('News')->fetchBy([
+                'fields'=>[
+                    'news.hide'=>'0',
+                    'ref_type_id'=> '2'
+                ],
+                'options'=>[
+                    'order by'=>['news.published_date','DESC'],
+                    'limit'=>[0,3]
+                ]
+            ],[
+                'join'=> true,
+            ]);
+
             $this->appView->set('title', 'Zibonele FM');
+            $this->appView->set('news', $news);
 			$this->appView->set('show_breadcrumb', false);
-            $this->appView->set('home', false);
+            // $this->appView->set('home', false);
 			$this->appView->render();
 
 		}

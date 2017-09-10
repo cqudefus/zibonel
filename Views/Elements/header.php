@@ -53,11 +53,12 @@
 <div class="module menu left">
 <ul id="nav-primary" class="nav nav-primary">
 
-                <li class="has-dropdown">
+                <li>
                     <a href="/">Home</a>
-                    <ul>
-                        <li><a href="/about_us">About</a></li>
-                    </ul>
+                </li>
+
+                <li>
+                    <a href="/about_us">About</a>
                 </li>
 
                 <li class="has-dropdown">
@@ -87,17 +88,15 @@
                 <li class="">
                     <a href="/gallery">Gallery</a>
                 </li>
-<!--
+               
                 <li class="">
-                    <a href="/programs">Advertisement</a>
-                </li>
--->
-
+                    <a href="/gallery">Gallery</a>
+                </li>  -->
 
                 <li class="">
                     <a href="/contacts">Contact</a>
                 </li>
-
+                <!--
                 <li class="has-dropdown">
                     <a href="">Other </a>
                         <ul>
@@ -109,7 +108,8 @@
                                     <a href="/programs">Podcast</a>
                             </li>
                     </ul>
-    </li>
+                </li>
+-->
 
 
 </ul>
