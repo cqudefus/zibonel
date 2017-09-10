@@ -183,7 +183,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../website-v2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -282,7 +282,7 @@
       <updated>1504829526383</updated>
       <workItem from="1504890856239" duration="3301000" />
       <workItem from="1504895544179" duration="4273000" />
-      <workItem from="1505019845706" duration="6284000" />
+      <workItem from="1505019845706" duration="6903000" />
     </task>
     <task id="LOCAL-00001" summary="Leo Update">
       <created>1505034841393</created>
@@ -291,11 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505034841393</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Leo Update">
+      <created>1505035077501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505035077501</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13858000" />
+    <option name="totallyTimeSpent" value="14477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
