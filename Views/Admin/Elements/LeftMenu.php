@@ -7,7 +7,6 @@
                     <li class="current"><a href="<?= berkaPhp\helpers\Html::action('/pages') ?>"><i class="glyphicon glyphicon-home"></i>Home</a></li>
                     <li><a href="<?= berkaPhp\helpers\Html::action('/about_us') ?>"><i class="glyphicon glyphicon-info-sign"></i>About us</a></li>
                     <li><a href="<?= berkaPhp\helpers\Html::action('/news') ?>"><i class="glyphicon glyphicon-globe"></i>News</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-play-circle"></i>line-up</a></li>
                     <li><a href="<?= berkaPhp\helpers\Html::action('/contacts') ?>"><i class="glyphicon glyphicon-phone-alt"></i>Contact</a></li>
                     <li><a href="<?= berkaPhp\helpers\Html::action('/users') ?>"><i class="glyphicon glyphicon-user"></i>Users</a></li>
 

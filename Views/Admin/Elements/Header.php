@@ -5,7 +5,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <img class="nav-log-img" src="/Views/Default/Assets/favicon_120x120.png" alt="">
-                    <h1 style="display: inline-block;"><a class="nav-log-tex" href="/" target="_blank">Zibonel Fm Admin</a></h1>
+                    <h1 style="display: inline-block;"><a class="nav-log-tex" href="/" target="_blank">Zibonele FM Admin</a></h1>
                 </div>
             </div>
             <div class="col-md-5">

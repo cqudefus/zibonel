@@ -7,10 +7,10 @@
 
                 <div class="row mb-50">
                     <div class="col-sm-6">
-                        <img src="/Views/Default/Assets/<?= $presenter['user_picture'] ?>" alt="<?= $presenter['user_name'] ?>">
+                        <img src="/Views/Default/Assets/<?= $presenter['user_picture'] ?>"  alt="<?= $presenter['nickname'] ?>">
                     </div>
                     <div class="col-sm-6">
-                        <h2 class="text-spacing text-uppercase font-secondary mb-0"><?= $presenter['user_name'] ?></h2>
+                        <h2 class="text-spacing text-uppercase font-secondary mb-0"><?= $presenter['nickname'] ?></h2>
                         <br>
                         <div class="row">
                             <div class="col-md-6">
@@ -23,35 +23,42 @@
                             </div>
                             <div class="col-md-6">
                                 <dl class="description-2">
-                                    <dt>Favour Colors</dt>
-                                    <dd>Feature to come</dd>
-                                    <dt>I dont know</dt>
-                                    <dd>Feature to come</dd>
+                                    <dt>Born In </dt>
+                                    <dd><?= $presenter['born_in'] ?></dd>
+                                    <dt>Be On Radio Since</dt>
+                                    <dd><?= $presenter['be_on_radio_since'] ?></dd>
                                 </dl>
                             </div>
                         </div>
-                        <p><?=\berkaPhp\helpers\Str::limitChar($presenter['user_description'], 100, '') ?></p>
+                        <p><?=\berkaPhp\helpers\Str::limitChar($presenter['who_am_i'], 150, '') ?></p>
                         <hr class="sep-line sep-2 mb-30 mt-30">
+
+                    <!--    <div class="widget widget-follow">
+                            <!--<h6 class="text-uppercase">Follow Us</h6>--
+                            <a href="#" class="icon icon-circle icon-facebook icon-xs"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="icon icon-circle icon-twitter icon-xs"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="icon icon-circle icon-instagram icon-xs"><i class="fa fa-instagram"></i></a>
+                        </div>-->
                     </div>
                 </div>
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs mb-30" role="tablist">
-                    <li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
-                    <li><a href="#additional-info" role="tab" data-toggle="tab">Additional Informations</a></li>
-                    <li><a href="#reviews" role="tab" data-toggle="tab">Reviews</a></li>
+                    <li class="active"><a href="#description" role="tab" data-toggle="tab">Full Person Background</a></li>
+                    <li><a href="#additional-info" role="tab" data-toggle="tab">Education/Career Background</a></li>
+                    <li><a href="#reviews" role="tab" data-toggle="tab">Additional Info</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active fade in" id="description">
-                        <p class="lead"><?= $presenter['user_description'] ?></p>
+                        <p class="lead"><?= $presenter['full_person_background'] ?></p>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="additional-info">
-                        <p class="lead"><?= $presenter['user_additional_info'] ?></p>
+                        <p class="lead"><?= $presenter['education_career_background'] ?></p>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="reviews">
-                        <?= $presenter['user_reviews'] ?>
+                        <?= $presenter['additional_info'] ?>
                     </div>
                 </div>
 
