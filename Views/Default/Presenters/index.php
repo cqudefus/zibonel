@@ -14,7 +14,6 @@
             </div>
         </form>
         <span class="pull-right mt-10 text-muted">
-            Displaying 8 of 12 items
         </span>
     </div>
     <hr class="sep-line sep-2 mt-30 mb-30">

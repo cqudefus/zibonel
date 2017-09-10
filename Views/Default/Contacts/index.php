@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="/Views/Default/Assets/News/young-radio-announcer.jpg" class="img-rounded mb-30"alt="">
+                <img src="/Views/Default/Assets/News/radio.jpg" class="img-rounded mb-30"alt="">
                 <address>
                     <strong>Address:</strong><br>
                     <?=$data["street_number"]?>, <?=$data["street_name"]?>, <?=$data["suburb_name"]?>

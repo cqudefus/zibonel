@@ -80,7 +80,7 @@
                     <a href="/blog">Blog</a>
                 </li>
 
-                <li class="">
+               <!---<li class="">
                     <a href="/events">Events</a>
                 </li>
 
