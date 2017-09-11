@@ -13,7 +13,7 @@
 
 
 -- Dumping database structure for zibonale
-DROP DATABASE IF EXISTS `zibonale`;
+--DROP DATABASE IF EXISTS `zibonale`;
 CREATE DATABASE IF NOT EXISTS `zibonale` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `zibonale`;
 
