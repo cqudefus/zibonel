@@ -64,9 +64,9 @@
                 <li class="has-dropdown">
                     <a href="/">On Air</a>
                     <ul>
-                        <!--<li class="">
+                        <li class="">
                             <a href="/programs">Line Up</a>
-                        </li>-->
+                        </li>
                         <li class="">
                             <a href="/presenters">Presenters</a>
                         </li>
@@ -88,10 +88,10 @@
                 <li class="">
                     <a href="/gallery">Gallery</a>
                 </li>
-               
+               -->
                 <li class="">
                     <a href="/gallery">Gallery</a>
-                </li>  -->
+                </li>
 
                 <li class="">
                     <a href="/contacts">Contact</a>

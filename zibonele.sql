@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.1.13-MariaDB - mariadb.org binary distribution
+-- Server version:               5.7.9 - MySQL Community Server (GPL)
 -- Server OS:                    Win64
 -- HeidiSQL Version:             9.4.0.5125
 -- --------------------------------------------------------
@@ -13,12 +13,10 @@
 
 
 -- Dumping database structure for zibonale
---DROP DATABASE IF EXISTS `zibonale`;
 CREATE DATABASE IF NOT EXISTS `zibonale` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `zibonale`;
 
 -- Dumping structure for table zibonale.about_us
-DROP TABLE IF EXISTS `about_us`;
 CREATE TABLE IF NOT EXISTS `about_us` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
@@ -36,7 +34,6 @@ INSERT INTO `about_us` (`id`, `title`, `description`, `vision`, `mission`, `bann
 /*!40000 ALTER TABLE `about_us` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcasts
-DROP TABLE IF EXISTS `broadcasts`;
 CREATE TABLE IF NOT EXISTS `broadcasts` (
   `bc_id` int(10) NOT NULL AUTO_INCREMENT,
   `bc_name` varchar(250) DEFAULT NULL,
@@ -61,7 +58,6 @@ INSERT INTO `broadcasts` (`bc_id`, `bc_name`, `bc_description`, `bc_icon`) VALUE
 /*!40000 ALTER TABLE `broadcasts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_days
-DROP TABLE IF EXISTS `broadcast_days`;
 CREATE TABLE IF NOT EXISTS `broadcast_days` (
   `bcd_id` int(10) NOT NULL AUTO_INCREMENT,
   `bcd_name` varchar(250) DEFAULT NULL,
@@ -85,7 +81,6 @@ INSERT INTO `broadcast_days` (`bcd_id`, `bcd_name`, `bcd_from`, `bcd_to`, `bcd_d
 /*!40000 ALTER TABLE `broadcast_days` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_presenters
-DROP TABLE IF EXISTS `broadcast_presenters`;
 CREATE TABLE IF NOT EXISTS `broadcast_presenters` (
   `bp_id` int(10) NOT NULL AUTO_INCREMENT,
   `bp_ref_bc` int(10) DEFAULT NULL,
@@ -112,7 +107,6 @@ INSERT INTO `broadcast_presenters` (`bp_id`, `bp_ref_bc`, `bp_ref_pres`) VALUES
 /*!40000 ALTER TABLE `broadcast_presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_times
-DROP TABLE IF EXISTS `broadcast_times`;
 CREATE TABLE IF NOT EXISTS `broadcast_times` (
   `bct_id` int(10) NOT NULL AUTO_INCREMENT,
   `bct_name` varchar(250) DEFAULT NULL,
@@ -140,7 +134,6 @@ INSERT INTO `broadcast_times` (`bct_id`, `bct_name`, `bct_from`, `bct_to`, `bct_
 /*!40000 ALTER TABLE `broadcast_times` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.contacts
-DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `cellphone` varchar(50) DEFAULT NULL,
@@ -164,7 +157,6 @@ INSERT INTO `contacts` (`id`, `cellphone`, `tell`, `email`, `street_name`, `subu
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.departments
-DROP TABLE IF EXISTS `departments`;
 CREATE TABLE IF NOT EXISTS `departments` (
   `dep_id` int(10) NOT NULL AUTO_INCREMENT,
   `dep_name` varchar(500) DEFAULT NULL,
@@ -180,24 +172,58 @@ INSERT INTO `departments` (`dep_id`, `dep_name`, `dep_description`) VALUES
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.gallery
-DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE IF NOT EXISTS `gallery` (
   `id` int(10) NOT NULL,
   `image_file` varchar(100) DEFAULT NULL,
   `image_heading` varchar(100) DEFAULT NULL,
-  `image_description` varchar(200) DEFAULT NULL,
+  `image_description` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.gallery: ~2 rows (approximately)
+-- Dumping data for table zibonale.gallery: ~23 rows (approximately)
 /*!40000 ALTER TABLE `gallery` DISABLE KEYS */;
 INSERT INTO `gallery` (`id`, `image_file`, `image_heading`, `image_description`) VALUES
-	(0, 'work01.jpg', 'gfgfgf', 'fgfgfgf'),
-	(1, 'work02.jpg', 'sgrfsgrthgshas', 'fgfgsgsdffgssg');
+	(0, '1.jpg', NULL, NULL),
+	(1, '2.jpg', NULL, NULL),
+	(2, '3.jpg', NULL, NULL),
+	(3, '4.jpg', NULL, NULL),
+	(4, '5.jpg', NULL, NULL),
+	(5, '6.jpg', NULL, NULL),
+	(6, '7.jpg', NULL, NULL),
+	(7, '8.jpg', NULL, NULL),
+	(8, '9.jpg', NULL, NULL),
+	(9, '10.jpg', NULL, NULL),
+	(10, '11.jpg', NULL, NULL),
+	(11, '12.jpg', NULL, NULL),
+	(12, '13.jpg', NULL, NULL),
+	(13, '14.jpg', NULL, NULL),
+	(14, '15.jpg', NULL, NULL),
+	(15, '16.jpg', NULL, NULL),
+	(16, '17.jpg', NULL, NULL),
+	(17, '18.jpg', NULL, NULL),
+	(18, '19.jpg', NULL, NULL),
+	(19, '20.jpg', NULL, NULL),
+	(20, '21.jpg', NULL, NULL),
+	(21, '22.jpg', NULL, NULL),
+	(22, '23.jpg', NULL, NULL);
 /*!40000 ALTER TABLE `gallery` ENABLE KEYS */;
 
+-- Dumping structure for table zibonale.lineupschedule
+CREATE TABLE IF NOT EXISTS `lineupschedule` (
+  `id` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `program_name` varchar(100) NOT NULL,
+  `program_host` varchar(1000) NOT NULL DEFAULT '0',
+  `program_time` varchar(50) NOT NULL,
+  `program_desc` varchar(1000) NOT NULL,
+  `program_image` int(11) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Dumping data for table zibonale.lineupschedule: 0 rows
+/*!40000 ALTER TABLE `lineupschedule` DISABLE KEYS */;
+/*!40000 ALTER TABLE `lineupschedule` ENABLE KEYS */;
+
 -- Dumping structure for table zibonale.news
-DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ref_cat` int(10) NOT NULL DEFAULT '1',
@@ -236,7 +262,6 @@ INSERT INTO `news` (`id`, `ref_cat`, `title`, `subtitle`, `published_date`, `lin
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_categories
-DROP TABLE IF EXISTS `news_categories`;
 CREATE TABLE IF NOT EXISTS `news_categories` (
   `cat_id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(100) DEFAULT NULL,
@@ -251,7 +276,6 @@ INSERT INTO `news_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 /*!40000 ALTER TABLE `news_categories` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_comments
-DROP TABLE IF EXISTS `news_comments`;
 CREATE TABLE IF NOT EXISTS `news_comments` (
   `com_id` int(10) NOT NULL AUTO_INCREMENT,
   `com_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -276,7 +300,6 @@ INSERT INTO `news_comments` (`com_id`, `com_date`, `com_ref_user`, `com_ref_news
 /*!40000 ALTER TABLE `news_comments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_types
-DROP TABLE IF EXISTS `news_types`;
 CREATE TABLE IF NOT EXISTS `news_types` (
   `type_id` int(10) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(250) DEFAULT NULL,
@@ -293,7 +316,6 @@ INSERT INTO `news_types` (`type_id`, `type_name`, `type_description`, `type_icon
 /*!40000 ALTER TABLE `news_types` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.positions
-DROP TABLE IF EXISTS `positions`;
 CREATE TABLE IF NOT EXISTS `positions` (
   `pos_id` int(10) NOT NULL AUTO_INCREMENT,
   `pos_name` varchar(250) DEFAULT NULL,
@@ -309,7 +331,6 @@ INSERT INTO `positions` (`pos_id`, `pos_name`, `pos_description`) VALUES
 /*!40000 ALTER TABLE `positions` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.presenters
-DROP TABLE IF EXISTS `presenters`;
 CREATE TABLE IF NOT EXISTS `presenters` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_staff_id` int(10) DEFAULT NULL,
@@ -330,7 +351,6 @@ INSERT INTO `presenters` (`pr_id`, `ref_staff_id`) VALUES
 /*!40000 ALTER TABLE `presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.programs
-DROP TABLE IF EXISTS `programs`;
 CREATE TABLE IF NOT EXISTS `programs` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `pr_ref_broadcast` int(10) DEFAULT NULL,
@@ -358,7 +378,6 @@ INSERT INTO `programs` (`pr_id`, `pr_ref_broadcast`, `pr_ref_day`, `pr_ref_time`
 /*!40000 ALTER TABLE `programs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.services
-DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL,
@@ -378,7 +397,6 @@ INSERT INTO `services` (`id`, `title`, `desciption`, `more`, `icon`) VALUES
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.staffs
-DROP TABLE IF EXISTS `staffs`;
 CREATE TABLE IF NOT EXISTS `staffs` (
   `staff_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_user_id` int(10) DEFAULT NULL,
@@ -406,7 +424,6 @@ INSERT INTO `staffs` (`staff_id`, `ref_user_id`, `ref_position_id`, `ref_departm
 /*!40000 ALTER TABLE `staffs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_fullname` varchar(200) DEFAULT '',
@@ -430,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `FK_users_user_roles` FOREIGN KEY (`user_ref_role`) REFERENCES `user_roles` (`role_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.users: ~7 rows (approximately)
+-- Dumping data for table zibonale.users: ~8 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`user_id`, `user_fullname`, `user_lastname`, `user_name`, `nickname`, `user_dob`, `born_in`, `be_on_radio_since`, `who_am_i`, `full_person_background`, `education_career_background`, `additional_info`, `user_ref_role`, `user_cellphone`, `user_email`, `user_password`, `user_picture`) VALUES
 	(1, 'Admin', 'Admin', 'Admin', '', '2015-09-08', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', 2, NULL, 'admin@gmail.com', '1234', 'no_image.png'),
@@ -444,7 +461,6 @@ INSERT INTO `users` (`user_id`, `user_fullname`, `user_lastname`, `user_name`, `
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.user_roles
-DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `role_id` int(10) NOT NULL AUTO_INCREMENT,
   `role_name` varchar(100) DEFAULT NULL,
