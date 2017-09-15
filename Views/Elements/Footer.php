@@ -57,7 +57,8 @@
 								<h6 class="text-uppercase text-muted">Check our FaceBook</h6>
 								<!-- Widget - Instagram -->
                 <div class="fb-page" data-href="https://www.facebook.com/ZiboneleFM/" data-tabs="timeline" data-height="265" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ZiboneleFM/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ZiboneleFM/">Zibonele FM 98.2</a></blockquote></div>
-                <div class="fb-like" data-href="https://www.facebook.com/ZiboneleFM/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+                
+                <div style="margin-top: 5px;" class="fb-like" data-href="https://www.facebook.com/ZiboneleFM/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
               </div>
 						</div>
 					</div>
