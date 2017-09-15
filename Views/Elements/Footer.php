@@ -54,10 +54,10 @@
 						<div class="col-md-4">
 							<!-- Widget - Contact Form -->
 							<div class="widget widget-contact-form">
-								<h6 class="text-uppercase text-muted">Check our Instagram</h6>
+								<h6 class="text-uppercase text-muted">Check our FaceBook</h6>
 								<!-- Widget - Instagram -->
-                <iframe src="//lightwidget.com/widgets/0d2114447e725be2b74b9b2f5f4cb603.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-                <a href="https://www.instagram.com/zibonelefm/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                <div class="fb-page" data-href="https://www.facebook.com/ZiboneleFM/" data-tabs="timeline" data-height="265" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ZiboneleFM/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ZiboneleFM/">Zibonele FM 98.2</a></blockquote></div>
+                <div class="fb-like" data-href="https://www.facebook.com/ZiboneleFM/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
               </div>
 						</div>
 					</div>
