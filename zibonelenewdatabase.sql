@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `about_us` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.about_us: ~0 rows (approximately)
+-- Dumping data for table zibonale.about_us: ~1 rows (approximately)
 /*!40000 ALTER TABLE `about_us` DISABLE KEYS */;
 INSERT INTO `about_us` (`id`, `title`, `description`, `vision`, `mission`, `banner`) VALUES
 	(1, 'Zibonele FM 98.2 ', 'Radio Zibonele 98.2 FM has got a very unique market; in the province of the Western Cape We are the only Community Radio Station that broadcast 80% of its programmes in IsiXhosa 24 hours a day in the Province. Level of education within the areas of our broadcast is relatively low, people tune in to our Radio Station as it is one of their powerful sources of information that is brought to them in language they understand. We structure our programmes to suit and appeal directly to this wonderful audience. <br><br>that is brought to them in language they understand. We structure our programmes to suit and appeal directly to this wonderful audience.&nbsp;<br><br><br>', 'Zibonele strives to be the best community radio station in the peninsula region, responsive to community needs and development through public broadcasting.<br><br>Radio Zibonele strives to be the best community radio station in the peninsula region, responsive to community needs and development through public broadcasting.<br>', 'As a trusted catalyst for lifelong learning, Radio Zibonele public broadcasting engages and enriches our community through distinctive programmes and services .<br><br>As a trusted catalyst for lifelong learning, Radio Zibonele public broadcasting engages and enriches our community through distinctive programmes and services .<br>', '');
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.contacts: ~0 rows (approximately)
+-- Dumping data for table zibonale.contacts: ~1 rows (approximately)
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
 INSERT INTO `contacts` (`id`, `cellphone`, `tell`, `email`, `street_name`, `suburb_name`, `street_number`, `facebook`, `twitter`, `instagram`, `google`, `youtube`) VALUES
 	(1, '', '021812569', 'info@zibonelefm.co.za', 'Ngcwalazi Dr, Village 1 South', 'Khayelitsha', '17 ', 'https://www.facebook.com/ZiboneleFM', 'https://twitter.com/', 'https://www.instagram.com/zibonelefm/', 'https://plus.google.com/', 'https://twitter.com/ZiboneleFM98');
@@ -210,17 +210,58 @@ INSERT INTO `gallery` (`id`, `image_file`, `image_heading`, `image_description`)
 
 -- Dumping structure for table zibonale.lineupschedule
 CREATE TABLE IF NOT EXISTS `lineupschedule` (
-  `id` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL,
   `program_name` varchar(100) NOT NULL,
-  `program_host` varchar(1000) NOT NULL DEFAULT '0',
+  `program_day_schedule` varchar(100) DEFAULT NULL,
   `program_time` varchar(50) NOT NULL,
+  `program_host` varchar(1000) NOT NULL DEFAULT '0',
   `program_desc` varchar(1000) NOT NULL,
-  `program_image` int(11) DEFAULT NULL,
+  `program_image` varchar(70) DEFAULT NULL,
   KEY `id` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.lineupschedule: 0 rows
+-- Dumping data for table zibonale.lineupschedule: 39 rows
 /*!40000 ALTER TABLE `lineupschedule` DISABLE KEYS */;
+INSERT INTO `lineupschedule` (`id`, `program_name`, `program_day_schedule`, `program_time`, `program_host`, `program_desc`, `program_image`) VALUES
+	(1, 'Umyalezo Wosuku', 'Mon-Fri', '05:30-06:00', 'Rev Vellem', 'Morning Prayer to start the day', 'Umyalezo_Wosuku.jpg'),
+	(2, 'Ilitha Lakho Breakfastshow', 'Mon-Fri ', '06:00-09:00', 'Zweli Nokhatywa & Roger Skade', 'It’s a magazine programme that provides the listeners with Information, Education, entertainment and make them happy while they prepare for work, school or whatever they need to do for the day.', 'Ilitha_Lakho_Breakfastshow.jpg'),
+	(3, 'Health and Esithebeni Nosapho ', 'Mon-Thurs', '09:00-12:00', 'Nolundi Pama & Tabita Busani', 'The first hour is about health issues education and necessary information that will be of benefit to the community. Esithebeni Nosapho is a talkshow dealing with women issues, which includes education,advice and information.', 'Health_and_Esithebeni_Nosapho.jpg'),
+	(4, 'Hlalethembeni ', 'Monday', '12:00-15:00', 'Zanele Shwane', 'The programme is meant to comfort and motivate those who are sick and those who are experiencing difficulties in their lives in general.', 'Hlalethembeni.jpg'),
+	(6, 'Developmental Issues ', 'Tues & Thurs', '12:00- 15:00', 'Bongani Mathenjwa & Sisipho Geni', 'The programme is a talkshow that provides information through interviews regarding developmental projects and plans in the communities we serve.', 'Developmental_Issues.jpg'),
+	(7, 'Celingoma     Ndikudlalele', 'Wednesday', '12:00-15:00', 'Bongani Mathenjwa & Sisipho Geni', 'This is a music programme where the listeners are encouraged to request a song of their choice and it will be played immediately.', 'Celingoma_Ndikudlalele.jpg'),
+	(8, 'Unyango Lwesintu', 'Fri ', '11:00-12:00', 'Sivuyile Wayi', 'The programme provides African traditional healing methods and education.', 'Unyango_Lwesintu.jpg'),
+	(9, 'Friday Dedications', 'Friday', '12:00-15:00', 'Bongani Mathenjwa & Sisipho Geni', 'Listeners dedications through phone calls, whatsapp, sms and Facebook', 'Friday_Dedications.jpg'),
+	(10, 'Isiphithiphithi', 'Mon-Thurs', '15:00-18:00', 'Fundi Ntshwanti & Samkelo Nqayi', 'It’s the Afternoon Drive time magazine programme, with handy information and tips, traffic, weather and sport updates. Educational and entertaining with light topics and interviews.', 'Isiphithiphithi.jpg'),
+	(11, 'Sithobe isandla sakho Yehova', 'Thursday', '9h:00 – 12h:00', 'Pheliswa Foss', 'This is a women’s religious programme', 'Sithobe_isandla_sakho_Yehova.jpg'),
+	(12, 'Zibonele Top 30', 'Friday', '15:00-18:00', 'Ntobsie Mcetywa', 'Music programme that counts down the Top 30 songs on the charts.', 'Zibonele_Top_30.jpg'),
+	(13, 'Ezemidlalo', 'Mon, Fri ', '19:00-20:00', 'Roger, Lifa, Nanganso, Sisanda', 'Sports programme that provides updates, interviews and general information about the different sporting codes and the National Teams.', 'Ezemidlalo.jpg'),
+	(14, 'Masifundisane ', 'Monday', '20:00-24:00', 'Lifa Gushman', 'It’s is an educational programme about general issues affecting the community', 'Masifundisane.jpg'),
+	(15, 'Ndikuthembis’  uthando', 'Tuesday ', '20:00-24:00', 'Tabita Busani & Lifa Gushman', 'It’s a talkshow that encourages people to love one another and share heart-warming love stories to curb violence against women and children as well.', 'Ndikuthembis_uthando.jpg'),
+	(16, 'Ingcambu Zevangeli', 'Wednesday', '20:00-24:00', 'Rev Ntobeko Gijana', 'This is a religious programme where religious related matters are debated', 'Ingcambu_Zevangeli.jpg'),
+	(17, 'Intlalo Yomtshato ', 'Thursday', '20:00-24:00', 'Rev Ntobeko Gijana', 'The programme encourages married couples to enjoy the beautiful institution of marriage, by living in harmony.', 'Intlalo_Yomtshato.jpg'),
+	(18, 'Ezidla Umzi ', 'Mon- Fri', '24:00-03:00', 'Sivuyile Wayi', 'Topical and current issues affecting the community are discussed.', 'Ezidla_Umzi.jpg'),
+	(19, 'Itshayile ', 'Mon-Fri', '03:00-05:00', 'Onke Jalamba', 'Daily morning wakeup call – encourages listeners to go to work/school or about their daily errands.', 'Itshayile.jpg'),
+	(20, 'Ezakuthi Iingoma', 'Friday ', '19:00- 21:00', 'Zolani Sunduza & Masichule Sithole', 'Traditional music programme “Maskandi” genre', 'Ezakuthi_Iingoma.jpg'),
+	(21, 'Ayatshis’ Amateki', 'Friday ', '21:00- 24:00', 'Zweli Nokhatywa', 'Music programme that plays the golden oldies from the eighties and nineties.', 'Ayatshis_Amateki.jpg'),
+	(22, 'Sgubhu SeKhasi', 'Friday', '24:00-03:00', 'Ntobsie Mcetywa & Bounce Gampu', 'Music programme for party animals', 'Sgubhu_SeKhasi.jpg'),
+	(23, 'Sigu’ guth’ unxhweme', 'Saturday', '09:00-12:00', 'Siyaxola Sobantu', 'Traditional music programme.', 'Sigu_guth_unxhweme.jpg'),
+	(24, 'Reggae ', 'Saturday', '12:00-13:00', 'Zolani Sunduza', 'Reggae music programme.', 'Reggae.jpg'),
+	(25, 'Unako ', 'Saturday ', '13:00-15:00', 'Fundi Ntshwanti', 'The programme deals with issues affecting people living with disabilities and youth issues.', 'Unako.jpg'),
+	(26, 'iSisele Solwazi', 'Saturday ', '15:00-18:00', 'Sivuyile Wayi', 'The programme is an educational and informative traditional programme. ', 'iSisele_Solwazi.jpg'),
+	(27, 'Yonwaba Nathi', 'Saturday', '19:30- 21:00', 'Aaron Madikane', 'A musical programme that mixes contemporary and old school afro pop and Kwaito.', 'Yonwaba_Nathi.jpg'),
+	(28, 'Ezinchamis’ Umxhelo ', 'Sunday', '24:00-03:00', 'Mvuyisi Mphakathi', 'The programme plays smooth Rhythm and Blues music.', 'Ezinchamis_Umxhelo.jpg'),
+	(29, 'Masivuke ', 'Sunday', '03:00-05:00', 'Bongani Mathenjwa', 'Programme encourages people to wake up and go to church.', 'Masivuke.jpg'),
+	(30, 'Masibuyele kuYehova', 'Sunday', '05:30-08:00', 'Rev Cebisile Vellem', 'The programme is meant to motivate people to get closer to God.', 'Masibuyele_kuYehova.jpg'),
+	(32, 'Umntwana Likhamva ', 'Saturday', '08:00-09:00', 'Ntobsie Mcetywa', 'It’s a children’s programme that’s educational and entertaining.', 'Umntwana_Likhamva.jpg'),
+	(33, 'Sunday Chill', 'Sunday ', '09:00-12:00', 'Zolani Sunduza', 'The music programme plays cool  mellow music and R&B', 'Sunday_Chill.jpg'),
+	(34, 'Iikwayala Zethu ', 'Sunday', '12:00-14:00', 'Ntobsie Mcetywa', 'Choral music programme', 'Iikwayala_Zethu.jpg'),
+	(35, 'uHadi Lwakho', 'Sunday', '14:00-16:00', 'Aaron Madikane', 'Jazz music programme', 'uHadi_Lwakho.jpg'),
+	(36, 'Ebukhoneni Bakhe', 'Sunday', '16:00-18:00', 'Nolundi Pama', 'Worship music programme for a Sunday afternoon.', 'Ebukhoneni_Bakhe.jpg'),
+	(37, 'Imfuna Lwazi NgeZopolitiko', 'Sunday', '18h:00', 'Zweli Nokhatywa & Lusindiso Mayambela', 'Political education programme', 'Imfuna_Lwazi_NgeZopolitiko.jpg'),
+	(38, 'Uhlangulo Lomphefumlo', 'Sunday', '20:00-24:00', 'Rev Ntobeko Gijana', 'Revival programme that preaches the word of GOD', 'Uhlangulo_Lomphefumlo.jpg'),
+	(39, 'Ezicamis’ umxhelo', 'Monday', '24:00-03:00', 'Mvuyisi Mphakathi', 'Rhythm and Blues smooth music programme', 'Ezicamis_umxhelo.jpg'),
+	(40, 'Isingqi saseKhaya', 'Saturday ', '03:00-05:00', 'Masichule Sithole', 'African Beat music programme.', 'Isingqi_saseKhaya.jpg'),
+	(41, 'Inkqubo Ndaba Yezabahlali', 'Mon & Thursday', '18h:00 – 19h:00', 'Xolisa Sindaphi', 'Music programme that plays the golden oldies from the eighties and nineties.', 'Inkqubo_Ndaba_Yezabahlali.jpg');
 /*!40000 ALTER TABLE `lineupschedule` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news
@@ -269,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `news_categories` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.news_categories: ~0 rows (approximately)
+-- Dumping data for table zibonale.news_categories: ~1 rows (approximately)
 /*!40000 ALTER TABLE `news_categories` DISABLE KEYS */;
 INSERT INTO `news_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 	(1, 'news', NULL);
