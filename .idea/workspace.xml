@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51cee9d4-0949-43c0-aae1-1fdf34a46737" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Pages/index.php" afterPath="$PROJECT_DIR$/Views/Default/Pages/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zibonelenewdatabase.sql" afterPath="$PROJECT_DIR$/zibonelenewdatabase.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Layout/css/theme-bottle.css" afterPath="$PROJECT_DIR$/Views/Default/Layout/css/theme-bottle.css" />
     </list>
     <ignored path="zibonale.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,18 +76,30 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Default/Gallery/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="76" />
+            <state relative-caret-position="306">
+              <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+              <folding>
+                <marker date="1505843864808" expanded="true" signature="1090:1118" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Default/Gallery/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Default/Gallery/view.php">
+      <file leaf-file-name="theme-bottle.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/Default/Layout/css/theme-bottle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="69" lean-forward="false" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+            <state relative-caret-position="17">
+              <caret line="1049" column="18" lean-forward="false" selection-start-line="1049" selection-start-column="18" selection-end-line="1049" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -109,18 +119,10 @@
         <entry file="file://$PROJECT_DIR$/Views/Default/News/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Default/Presenters/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-              <folding />
+              <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+              <folding>
+                <marker date="1505843864855" expanded="true" signature="2065:3106" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,6 +154,7 @@
         <option value="$PROJECT_DIR$/Models/ProgramsTable.php" />
         <option value="$PROJECT_DIR$/Views/Default/Programs/index.php" />
         <option value="$PROJECT_DIR$/Views/Default/Pages/index.php" />
+        <option value="$PROJECT_DIR$/Views/Default/Layout/css/theme-bottle.css" />
       </list>
     </option>
   </component>
@@ -248,7 +251,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pages" />
+              <option name="myItemId" value="Layout" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,7 +273,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="News" />
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,7 +299,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
+              <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,7 +414,7 @@
       <workItem from="1505495565263" duration="113000" />
       <workItem from="1505496642467" duration="5162000" />
       <workItem from="1505637160582" duration="2821000" />
-      <workItem from="1505838079293" duration="1098000" />
+      <workItem from="1505838079293" duration="2459000" />
     </task>
     <task id="LOCAL-00001" summary="Leo Update">
       <created>1505034841393</created>
@@ -427,7 +434,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27532000" />
+    <option name="totallyTimeSpent" value="28893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1284" height="1010" extended-state="1" />
@@ -479,13 +486,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example/eventinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Admin/Elements/Header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -775,9 +775,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Gallery/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="76" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding>
+            <marker date="1505843864808" expanded="true" signature="1090:1118" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,8 +826,10 @@
     <entry file="file://$PROJECT_DIR$/Views/Default/News/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
+          <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding>
+            <marker date="1505843864855" expanded="true" signature="2065:3106" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -839,8 +843,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Gallery/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="69" lean-forward="false" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Default/Layout/css/theme-bottle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1049" column="18" lean-forward="false" selection-start-line="1049" selection-start-column="18" selection-end-line="1049" selection-end-column="18" />
           <folding />
         </state>
       </provider>
