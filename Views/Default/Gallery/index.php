@@ -11,7 +11,7 @@
                      <div class="col-sm-3">
             <div class="image-box image-hover text-center">
                 <div class="image">
-                    <a href="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" data-lightbox="gallery" data-title="Image Title"><img src="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" alt=""></a>
+                    <a href="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" data-lightbox="gallery" data-title="<?=$data["image_heading"]?>"><img src="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" alt=""></a>
                 </div>
                 <div class="title">
                     <a href="#">
