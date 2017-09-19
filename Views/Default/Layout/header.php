@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="/Views/Default/Layout/css/styles.css" />
     <link rel="stylesheet" href="/Views/Default/Layout/css/style.css" />
+    <link rel="stylesheet" href="/Views/Default/Layout/css/news_banner.css" />
     <!-- CSS Base -->
     <link id="theme" rel="stylesheet" href="/Views/Default/Layout/css/theme-bottle.css" />
 
