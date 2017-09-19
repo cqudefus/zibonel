@@ -72,7 +72,7 @@
 				<div class="container v-center home-text">
 					<div class="row">
 						<div class="col-lg-6 col-md-8">
-							<h1 class="font-secondary banner-text">Hlala Nathi</h1>
+							<h1 class="font-secondary banner-text">Abasasazi </h1>
 							<h5 class="mb-40 text-muted"></h5>
 							<div class="row">
 								<div class="col-sm-6">
