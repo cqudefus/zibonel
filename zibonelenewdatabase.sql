@@ -183,29 +183,29 @@ CREATE TABLE IF NOT EXISTS `gallery` (
 -- Dumping data for table zibonale.gallery: ~23 rows (approximately)
 /*!40000 ALTER TABLE `gallery` DISABLE KEYS */;
 INSERT INTO `gallery` (`id`, `image_file`, `image_heading`, `image_description`) VALUES
-	(0, '1.jpg', NULL, NULL),
-	(1, '2.jpg', NULL, NULL),
-	(2, '3.jpg', NULL, NULL),
-	(3, '4.jpg', NULL, NULL),
-	(4, '5.jpg', NULL, NULL),
-	(5, '6.jpg', NULL, NULL),
-	(6, '7.jpg', NULL, NULL),
-	(7, '8.jpg', NULL, NULL),
-	(8, '9.jpg', NULL, NULL),
-	(9, '10.jpg', NULL, NULL),
-	(10, '11.jpg', NULL, NULL),
-	(11, '12.jpg', NULL, NULL),
-	(12, '13.jpg', NULL, NULL),
-	(13, '14.jpg', NULL, NULL),
-	(14, '15.jpg', NULL, NULL),
-	(15, '16.jpg', NULL, NULL),
-	(16, '17.jpg', NULL, NULL),
-	(17, '18.jpg', NULL, NULL),
-	(18, '19.jpg', NULL, NULL),
-	(19, '20.jpg', NULL, NULL),
-	(20, '21.jpg', NULL, NULL),
-	(21, '22.jpg', NULL, NULL),
-	(22, '23.jpg', NULL, NULL);
+	(0, '1.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(1, '2.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(2, '3.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(3, '4.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(4, '5.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(5, '6.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(6, '7.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(7, '8.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(8, '9.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(9, '10.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(10, '11.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(11, '12.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(12, '13.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(13, '14.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(14, '15.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(15, '16.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(16, '17.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(17, '18.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(18, '19.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(19, '20.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(20, '21.jpg', 'Youth Debate', 'Getting the Youth talk about their surrondings '),
+	(21, '22.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(22, '23.jpg', 'Gospel Event', 'Thoba isandla sakho yehova');
 /*!40000 ALTER TABLE `gallery` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.lineupschedule
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `news_comments` (
   CONSTRAINT `FK_news_comments_users` FOREIGN KEY (`com_ref_user`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.news_comments: ~0 rows (approximately)
+-- Dumping data for table zibonale.news_comments: ~1 rows (approximately)
 /*!40000 ALTER TABLE `news_comments` DISABLE KEYS */;
 INSERT INTO `news_comments` (`com_id`, `com_date`, `com_ref_user`, `com_ref_news`, `comment`, `com_status`) VALUES
 	(1, '2017-09-19 09:24:18', 7, 12, 'ad', 1);
