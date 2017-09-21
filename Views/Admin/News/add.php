@@ -45,29 +45,29 @@
         </div>
     </div>
 
-    <div class="content-box-large content-admin-holder">
-        <div class="panel-heading">
-            <div class="panel-title"><label for="contents" style='text-transform: capitalize;'>Contents</label></div>
-        </div>
-        <div class="panel-body">
-        <!-- bootstrap-imageupload. -->
-            <div class="imageupload panel panel-default">
-                <div class="panel-heading clearfix">
-                    <h3 class="panel-title pull-left">Upload Image</h3>
-                    <div class="btn-group pull-right">
-                        <button type="button" class="btn btn-default active">File</button>
-                    </div>
-                </div>
-                <div class="file-tab panel-body">
-                    <label class="btn btn-default btn-file">
-                        <span>Browse</span>
-                        <!-- The file is stored here. -->
-                        <input type="file" name="image-file">
-                    </label>
-                    <button type="button" class="btn btn-default">Remove</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="content-box-large content-admin-holder">-->
+<!--        <div class="panel-heading">-->
+<!--            <div class="panel-title"><label for="contents" style='text-transform: capitalize;'>Contents</label></div>-->
+<!--        </div>-->
+<!--        <div class="panel-body">-->
+<!--        <!-- bootstrap-imageupload. -->
+<!--            <div class="imageupload panel panel-default">-->
+<!--                <div class="panel-heading clearfix">-->
+<!--                    <h3 class="panel-title pull-left">Upload Image</h3>-->
+<!--                    <div class="btn-group pull-right">-->
+<!--                        <button type="button" class="btn btn-default active">File</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="file-tab panel-body">-->
+<!--                    <label class="btn btn-default btn-file">-->
+<!--                        <span>Browse</span>-->
+<!--                        <!-- The file is stored here. -->
+<!--                        <input type="file" name="image-file">-->
+<!--                    </label>-->
+<!--                    <button type="button" class="btn btn-default">Remove</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

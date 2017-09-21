@@ -18,7 +18,7 @@
                         <th style='text-transform: capitalize;'>title</th>
                         <th style='text-transform: capitalize;'>subtitle</th>
                         <th style='text-transform: capitalize;'>published date</th>
-                        <th style='text-transform: capitalize;'>link</th>
+                        <th style='text-transform: capitalize;'>Views</th>
                         <th style='text-transform: capitalize;'>contents</th>
                         <th>Options</th>
                     </tr>
@@ -41,12 +41,22 @@
                                 <?=berkaPhp\helpers\Str::limitChar($data["subtitle"], 25, '...')?>
                             </td>
                             <td>
-                                150v
+                                <?=$data['view']?> views
                             </td>
                             <td>
-                                <span class="label label-<?= $data['hide'] == 0 ? 'primary' : 'danger' ?>">
-                                    <?= $data['hide'] == 0 ? 'Active' : 'Hidden' ?>
-                                </span>
+                                <?php if($data['hide'] == 0) : ?>
+                                    <a href="/admin/news/hide/<?=$data['id']?>">
+                                        <span class="label label-primary">
+                                            Delete
+                                        </span>
+                                    </a>
+                                <?php else: ?>
+                                    <a href="/admin/news/activate/<?=$data['id']?>">
+                                        <span class="label label-danger">
+                                            Activate
+                                        </span>
+                                    </a>
+                                <?php endif ?>
                             </td>
                             <td>
                                 <a href="/news/view/<?=$data['link']?>" target="_blank"><span class="label label-primary">View</span></a>
