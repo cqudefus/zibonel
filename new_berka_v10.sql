@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.7.9 - MySQL Community Server (GPL)
+-- Server version:               10.1.13-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             9.4.0.5125
 -- --------------------------------------------------------
@@ -13,10 +13,12 @@
 
 
 -- Dumping database structure for zibonale
+DROP DATABASE IF EXISTS `zibonale`;
 CREATE DATABASE IF NOT EXISTS `zibonale` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `zibonale`;
 
 -- Dumping structure for table zibonale.about_us
+DROP TABLE IF EXISTS `about_us`;
 CREATE TABLE IF NOT EXISTS `about_us` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
@@ -34,6 +36,7 @@ INSERT INTO `about_us` (`id`, `title`, `description`, `vision`, `mission`, `bann
 /*!40000 ALTER TABLE `about_us` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcasts
+DROP TABLE IF EXISTS `broadcasts`;
 CREATE TABLE IF NOT EXISTS `broadcasts` (
   `bc_id` int(10) NOT NULL AUTO_INCREMENT,
   `bc_name` varchar(250) DEFAULT NULL,
@@ -58,6 +61,7 @@ INSERT INTO `broadcasts` (`bc_id`, `bc_name`, `bc_description`, `bc_icon`) VALUE
 /*!40000 ALTER TABLE `broadcasts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_days
+DROP TABLE IF EXISTS `broadcast_days`;
 CREATE TABLE IF NOT EXISTS `broadcast_days` (
   `bcd_id` int(10) NOT NULL AUTO_INCREMENT,
   `bcd_name` varchar(250) DEFAULT NULL,
@@ -81,6 +85,7 @@ INSERT INTO `broadcast_days` (`bcd_id`, `bcd_name`, `bcd_from`, `bcd_to`, `bcd_d
 /*!40000 ALTER TABLE `broadcast_days` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_presenters
+DROP TABLE IF EXISTS `broadcast_presenters`;
 CREATE TABLE IF NOT EXISTS `broadcast_presenters` (
   `bp_id` int(10) NOT NULL AUTO_INCREMENT,
   `bp_ref_bc` int(10) DEFAULT NULL,
@@ -107,6 +112,7 @@ INSERT INTO `broadcast_presenters` (`bp_id`, `bp_ref_bc`, `bp_ref_pres`) VALUES
 /*!40000 ALTER TABLE `broadcast_presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_times
+DROP TABLE IF EXISTS `broadcast_times`;
 CREATE TABLE IF NOT EXISTS `broadcast_times` (
   `bct_id` int(10) NOT NULL AUTO_INCREMENT,
   `bct_name` varchar(250) DEFAULT NULL,
@@ -134,6 +140,7 @@ INSERT INTO `broadcast_times` (`bct_id`, `bct_name`, `bct_from`, `bct_to`, `bct_
 /*!40000 ALTER TABLE `broadcast_times` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.contacts
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `cellphone` varchar(50) DEFAULT NULL,
@@ -157,6 +164,7 @@ INSERT INTO `contacts` (`id`, `cellphone`, `tell`, `email`, `street_name`, `subu
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.departments
+DROP TABLE IF EXISTS `departments`;
 CREATE TABLE IF NOT EXISTS `departments` (
   `dep_id` int(10) NOT NULL AUTO_INCREMENT,
   `dep_name` varchar(500) DEFAULT NULL,
@@ -172,6 +180,7 @@ INSERT INTO `departments` (`dep_id`, `dep_name`, `dep_description`) VALUES
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.gallery
+DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE IF NOT EXISTS `gallery` (
   `id` int(10) NOT NULL,
   `image_file` varchar(100) DEFAULT NULL,
@@ -209,6 +218,7 @@ INSERT INTO `gallery` (`id`, `image_file`, `image_heading`, `image_description`)
 /*!40000 ALTER TABLE `gallery` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.lineupschedule
+DROP TABLE IF EXISTS `lineupschedule`;
 CREATE TABLE IF NOT EXISTS `lineupschedule` (
   `id` int(10) NOT NULL,
   `program_name` varchar(100) NOT NULL,
@@ -265,6 +275,7 @@ INSERT INTO `lineupschedule` (`id`, `program_name`, `program_day_schedule`, `pro
 /*!40000 ALTER TABLE `lineupschedule` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news
+DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ref_cat` int(10) NOT NULL DEFAULT '1',
@@ -283,7 +294,6 @@ CREATE TABLE IF NOT EXISTS `news` (
   KEY `FK_news_news_types` (`ref_type_id`),
   KEY `FK_news_users` (`author`),
   KEY `FK_news_news_categories` (`ref_cat`),
-  CONSTRAINT `FK_news_news_categories` FOREIGN KEY (`ref_cat`) REFERENCES `news_categories` (`cat_id`),
   CONSTRAINT `FK_news_news_types` FOREIGN KEY (`ref_type_id`) REFERENCES `news_types` (`type_id`),
   CONSTRAINT `FK_news_users` FOREIGN KEY (`author`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
@@ -291,12 +301,13 @@ CREATE TABLE IF NOT EXISTS `news` (
 -- Dumping data for table zibonale.news: ~3 rows (approximately)
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 INSERT INTO `news` (`id`, `ref_cat`, `title`, `subtitle`, `published_date`, `link`, `contents`, `sumary`, `ref_type_id`, `hide`, `image`, `view`, `author`) VALUES
-	(1, 1, 'Fatal attraction', 'Amanda’s aunt, Nomonde Myeki, says the killing of her niece and the subsequent turn of events brought a lot of misery to the family.', '2017-09-19 09:05:55', 'fatal-attraction', '<p>A Langa family is hoping to get all the answers when the man accused of killing their daughter goes on trial.</p><p>Buhle Mkaliphi, 31, made his second court appearance at the Khayelitsha Regional Court on Tuesday September 12 for allegedly killing his girlfriend, Amanda Myeki.</p><p>He will make his next court appearance on Tuesday October 17.</p><p>The 26-year-old Langa woman was found dead at Mr Mkaliphi’s home in Ekuphumleni, in Khayelitsha, on Sunday September 3.</p><div><div></div></div><p>Her boyfriend, with whom she has a one-year-old son, was arrested the next day.</p><p>He made his first court appearance on Tuesday September 5, but was remanded in custody at Pollsmor prison.</p><p>It is unclear what led to the killing, but Amanda’s body was allegedly found laying on the floor in her boyfriend’s room.</p><p>The killing has raised the ire of Amanda’s relatives. The family says the pain of her death is too hard to bear.</p><p>A livid aunt, Nomonde Myeki, said the couple had been dating for a long time.</p><p>Nomonde said the family was devastated by the murder, particularly considering that her niece allegedly died at the hands of somebody who was meant to love her.</p><p>Nomonde said Amanda had left her home on Saturday with her boyfriend and numerous attempts to get hold of her on Sunday were in vain.</p><p>“She spent most of her time there, up to three days a week,” she said.</p><p>“I wanted her to come back because she had left the child, but her phone was not answered. I even sent her a message.”</p><p>Nomonde said later in the day they received a call from a relative who stayed close to Amanda’s boyfriend, informing them that she was dead.</p><p>She said they immediately rushed to Khayelitsha, but when they arrived at the crime scene the house was locked. “We wanted to see the place where she was killed, but the homeowner was very rude to us. We were treated like criminals,” said Nomonde.</p><p>While the circumstances surrounding the death remained a mystery, the Myeki family believes the accused’s mother has some questions to answer. “She knows what happened to our child. We knew there were some issues in their relationship, but we never thought it would get to this point,” said Nomonde.</p><p>“I would love to hear directly from them what happened and they must not lie.” Amanda’s mother was too heartbroken to talk.</p><p>Police spokesperson Constable Xoliswa Nyalambisa said the police investigation into the killing was ongoing. “But we are opposing his bail application,” she said. “We would not want a situation where we would have to look for him again.”</p>', NULL, 1, 0, 'no_image.png', 0, NULL),
-	(11, 1, 'PPG Langa impresses at u-19 Premier Cup', 'Project Playground (PPG) Langa produced another excellent performance in this year’s Bayhill under-19 Premier Cup, going all the way to the quarter-finals, before losing 4-0 against eventual winners Supersport United at Erica Park in Belhar at the weekend.', '2017-09-19 09:11:42', 'ppg-langa-impresses-at-u-19-premier-cup', '<p>Project Playground (PPG) Langa produced another excellent performance in this year’s Bayhill under-19 Premier Cup, going all the way to the quarter-finals, before losing 4-0 against eventual winners Supersport United at Erica Park in Belhar at the weekend.</p><p>The side, however, didn’t walk away empty-handed as they won the competition’s midsection title, beating 2015 champions, Glendene United 1-0 in the final, on Easter Monday.</p><p>Their best performance of the competition, however, came when they sent six time champions and favourites, Ajax Cape Town, home in the last 16.</p><p>In what proved to be one of the best matches of the competition, coach Gareth Ncaca’s side showed no respect for their highly fancied opponents. The star-studded Ajax squad - which had first team players Lutando Mateza, Sirgio Kammies and rising star Sonwabile Mfecane - was caught off guard as PPG came at them with pace and skill. The Langa side went on to win 3-1 following a dramatic penalty shootout.</p><div><div></div></div><p>PPG have proved, over the years, to be Ajax’s nemesis in this competition. In 2015, when they made their first appearance at the competition, Ncaca’s charges qualified for the last 16 at the expense of the then champions Ajax.</p><p>Saturday’s last 16 encounter was a highly contested affair and the score, on regulation time, was goalless. The sides went to extra time and, in a dramatic turn of events, reigning Safa-Cape Town referee of the year Akhona Ndzingo, from Site C, showed Ajax’s Sirgio Kimmies a red card, following a reckless tackle from behind.</p><p>The match had to be decided on penalties after neither side could break the deadlock.</p><p>The penalties themselves were tense and Ajax’s Luke Vester was the first to take a spot kick. The youngster made no mistake, making it 1-0 for his side. Awonke Mlanjeni converted PPG’s first spot kick to make it 1-all. The pressure was now on Ajax’s Jay-Dee Adams. The youngster looked casual and that proved suicidal as he missed the target.</p><p>It was, by then, PPG’s chance to take the advantage. And, they did exactly that, with Buzwe Bam making it 2-1. Ajax, at that point, had to score their next spot kick to keep them in the game but PPG goalkeeper, Kwanele Gongxeka, had other ideas, saving Bonga Dladla’s penalty. And, to make matters more difficult for them, Samkelo Mkiva scored PPG’s third goal. A save by Gongxeka against Ajax’s next spot kick would take PPG to the quarters, and he did exactly that, denying Ajax golden boy, Sonwabile Mfecane the opportunity to take his side to the quarter-finals against last year’s champions, Supersport United, and kicking Ajax out of the championship stages of the competition.</p><p>Ncaca said he was aware that his side could match Ajax on a man-to-man basis, which resulted in them focusing on teamwork.</p><p>“All we had to do was to stick to the game plan and work for each other. We also didn’t want to sit back and defend, as that would have been suicidal. So, we attacked as a team and used our speedy wingers to run at them. That worked as Ajax got frustrated,” said Ncaca</p>', NULL, 1, 0, 'no_image.png', 0, NULL),
-	(12, 1, 'Madosini shares her love for traditional music', 'Madosini plays uhadi. The instrument is made up of a calabash, which must be pressed to the flesh to produce the sound.', '2017-09-19 09:17:20', 'madosini-shares-her-love-for-traditional-music', '<p>The black people’s culture and heritage will soon be a thing of the past if nothing is done to preserve it.</p><p>In fact some important cultural traditions have already lost their true meaning, that is according to renowned traditional musician Latozi Manqineni, better known as Madosini.</p><p>Madosini, who has made a name for herself locally and internationally through her art of playing traditional music instruments uhadi and umrubhe, said this type of music could disappear if nothing was done.</p><p>While the two instruments have a deep-rooted history in Xhosa traditions, Madosini is arguably the only remaining master of playing them.</p><div><div></div></div><p>Growing up in the rural areas of the former Transkei with absolutely no educational background, from the age of 12 Madosini has ensured that the instruments remain relevant in today’s society.</p><p>With the assistance of another traditional musician, Dizu Plaatjies, Madosini moved to Cape Town to spread the word. Since then, she has made a name for herself.</p><p>She said her greatest desire was to see the instruments being played when she can no longer play them.</p><p>Last year saw the realisation of her dream, when the Madosini Indigenous Instruments Legacy Project teamed up with Calabash Storytellers to educate young people about the instruments.</p><p>While she believes that it was a good start by well-known actor Andrea Dondolo, she said more was needed.</p><p>In an interview with Vukani as we celebrate Heritage Month, the multi-award winner was at pains as she narrated her concerns regarding black traditions and cultural practises.</p><p>“How is this (interview) going to help?” she asked. “It is not going to change my life because there is no interest in this kind of music in our country. Overseas people are more interested in it. White people like this music a lot. Some travelled from as far as Swirtzeland to learn about it.”</p><p>Madosini said the worst thing would be for the music to be completely wiped from South African borders and later return as something South Africans have to pay for. While she supports the need for people to be educated, she cautioned against extinction of black people’s culture. “The people who write down everything is the white people,” she said. “We had our way of doing things and survived. But all that is now going away. We are giving it away and the white people are taking it.”</p><p>While she was initially against relocating to Cape Town because of “thugs in urban areas”, she said the move was a blessing in disguise.</p><p>“It was not a mistake when God brought me here at an old age, he wanted other people to benefit,” she said. “Through me He brought bread to other people as well. The sad thing is when people eat that bread and not share with me. I don’t mind even if you get a loaf and give me a slice or you cook your meat and give me the gravy and tell me that the meat burnt up. I will eat.”</p><p>She said while she continued to rake in awards, very little went into her bank account. However, she was full of praises for Ms Dondolo.</p><p>“She has been so wonderful to me,” she said. “When I reached out to her, she listened and assisted me. Today we have children who have learnt this.”</p><p>Commenting on her relationship with Madosini, Ms Dondolo said she always appreciated her music. Despite all the challenges Madosini encountered in the industry, Ms Dondolo hailed her as the epitome of hope for many in the music industry. “She has gone through a rough patch in the music industry, but she has a very good heart, and she loves her music. Very few people value and love the industry the way she does. She is a gem. Even though we have children who have learnt her music, there is only one Madosini.”</p><p>Ms Dondolo said she would love to see more kids trained to play the music, but funding remains a challenge.</p>', NULL, 1, 0, 'no_image.png', 0, NULL);
+	(1, 1, 'Fatal attraction', 'Amanda’s aunt, Nomonde Myeki, says the killing of her niece and the subsequent turn of events brought a lot of misery to the family.', '2017-09-19 09:05:55', 'fatal-attraction', '<p>A Langa family is hoping to get all the answers when the man accused of killing their daughter goes on trial.</p><p>Buhle Mkaliphi, 31, made his second court appearance at the Khayelitsha Regional Court on Tuesday September 12 for allegedly killing his girlfriend, Amanda Myeki.</p><p>He will make his next court appearance on Tuesday October 17.</p><p>The 26-year-old Langa woman was found dead at Mr Mkaliphi’s home in Ekuphumleni, in Khayelitsha, on Sunday September 3.</p><div><div></div></div><p>Her boyfriend, with whom she has a one-year-old son, was arrested the next day.</p><p>He made his first court appearance on Tuesday September 5, but was remanded in custody at Pollsmor prison.</p><p>It is unclear what led to the killing, but Amanda’s body was allegedly found laying on the floor in her boyfriend’s room.</p><p>The killing has raised the ire of Amanda’s relatives. The family says the pain of her death is too hard to bear.</p><p>A livid aunt, Nomonde Myeki, said the couple had been dating for a long time.</p><p>Nomonde said the family was devastated by the murder, particularly considering that her niece allegedly died at the hands of somebody who was meant to love her.</p><p>Nomonde said Amanda had left her home on Saturday with her boyfriend and numerous attempts to get hold of her on Sunday were in vain.</p><p>“She spent most of her time there, up to three days a week,” she said.</p><p>“I wanted her to come back because she had left the child, but her phone was not answered. I even sent her a message.”</p><p>Nomonde said later in the day they received a call from a relative who stayed close to Amanda’s boyfriend, informing them that she was dead.</p><p>She said they immediately rushed to Khayelitsha, but when they arrived at the crime scene the house was locked. “We wanted to see the place where she was killed, but the homeowner was very rude to us. We were treated like criminals,” said Nomonde.</p><p>While the circumstances surrounding the death remained a mystery, the Myeki family believes the accused’s mother has some questions to answer. “She knows what happened to our child. We knew there were some issues in their relationship, but we never thought it would get to this point,” said Nomonde.</p><p>“I would love to hear directly from them what happened and they must not lie.” Amanda’s mother was too heartbroken to talk.</p><p>Police spokesperson Constable Xoliswa Nyalambisa said the police investigation into the killing was ongoing. “But we are opposing his bail application,” she said. “We would not want a situation where we would have to look for him again.”</p>', NULL, 2, 0, 'no_image.png', 0, NULL),
+	(11, 1, 'PPG Langa impresses at u-19 Premier Cup', 'Project Playground (PPG) Langa produced another excellent performance in this year’s Bayhill under-19 Premier Cup, going all the way to the quarter-finals, before losing 4-0 against eventual winners Supersport United at Erica Park in Belhar at the weekend.', '2017-09-19 09:11:42', 'ppg-langa-impresses-at-u-19-premier-cup', '<p>Project Playground (PPG) Langa produced another excellent performance in this year’s Bayhill under-19 Premier Cup, going all the way to the quarter-finals, before losing 4-0 against eventual winners Supersport United at Erica Park in Belhar at the weekend.</p><p>The side, however, didn’t walk away empty-handed as they won the competition’s midsection title, beating 2015 champions, Glendene United 1-0 in the final, on Easter Monday.</p><p>Their best performance of the competition, however, came when they sent six time champions and favourites, Ajax Cape Town, home in the last 16.</p><p>In what proved to be one of the best matches of the competition, coach Gareth Ncaca’s side showed no respect for their highly fancied opponents. The star-studded Ajax squad - which had first team players Lutando Mateza, Sirgio Kammies and rising star Sonwabile Mfecane - was caught off guard as PPG came at them with pace and skill. The Langa side went on to win 3-1 following a dramatic penalty shootout.</p><div><div></div></div><p>PPG have proved, over the years, to be Ajax’s nemesis in this competition. In 2015, when they made their first appearance at the competition, Ncaca’s charges qualified for the last 16 at the expense of the then champions Ajax.</p><p>Saturday’s last 16 encounter was a highly contested affair and the score, on regulation time, was goalless. The sides went to extra time and, in a dramatic turn of events, reigning Safa-Cape Town referee of the year Akhona Ndzingo, from Site C, showed Ajax’s Sirgio Kimmies a red card, following a reckless tackle from behind.</p><p>The match had to be decided on penalties after neither side could break the deadlock.</p><p>The penalties themselves were tense and Ajax’s Luke Vester was the first to take a spot kick. The youngster made no mistake, making it 1-0 for his side. Awonke Mlanjeni converted PPG’s first spot kick to make it 1-all. The pressure was now on Ajax’s Jay-Dee Adams. The youngster looked casual and that proved suicidal as he missed the target.</p><p>It was, by then, PPG’s chance to take the advantage. And, they did exactly that, with Buzwe Bam making it 2-1. Ajax, at that point, had to score their next spot kick to keep them in the game but PPG goalkeeper, Kwanele Gongxeka, had other ideas, saving Bonga Dladla’s penalty. And, to make matters more difficult for them, Samkelo Mkiva scored PPG’s third goal. A save by Gongxeka against Ajax’s next spot kick would take PPG to the quarters, and he did exactly that, denying Ajax golden boy, Sonwabile Mfecane the opportunity to take his side to the quarter-finals against last year’s champions, Supersport United, and kicking Ajax out of the championship stages of the competition.</p><p>Ncaca said he was aware that his side could match Ajax on a man-to-man basis, which resulted in them focusing on teamwork.</p><p>“All we had to do was to stick to the game plan and work for each other. We also didn’t want to sit back and defend, as that would have been suicidal. So, we attacked as a team and used our speedy wingers to run at them. That worked as Ajax got frustrated,” said Ncaca</p>', NULL, 2, 0, 'no_image.png', 2, 5),
+	(12, 1, 'Madosini shares her love for traditional music', 'Madosini plays uhadi. The instrument is made up of a calabash, which must be pressed to the flesh to produce the sound.', '2017-09-19 09:17:20', 'madosini-shares-her-love-for-traditional-music', '<p>The black people’s culture and heritage will soon be a thing of the past if nothing is done to preserve it.</p><p>In fact some important cultural traditions have already lost their true meaning, that is according to renowned traditional musician Latozi Manqineni, better known as Madosini.</p><p>Madosini, who has made a name for herself locally and internationally through her art of playing traditional music instruments uhadi and umrubhe, said this type of music could disappear if nothing was done.</p><p>While the two instruments have a deep-rooted history in Xhosa traditions, Madosini is arguably the only remaining master of playing them.</p><div><div></div></div><p>Growing up in the rural areas of the former Transkei with absolutely no educational background, from the age of 12 Madosini has ensured that the instruments remain relevant in today’s society.</p><p>With the assistance of another traditional musician, Dizu Plaatjies, Madosini moved to Cape Town to spread the word. Since then, she has made a name for herself.</p><p>She said her greatest desire was to see the instruments being played when she can no longer play them.</p><p>Last year saw the realisation of her dream, when the Madosini Indigenous Instruments Legacy Project teamed up with Calabash Storytellers to educate young people about the instruments.</p><p>While she believes that it was a good start by well-known actor Andrea Dondolo, she said more was needed.</p><p>In an interview with Vukani as we celebrate Heritage Month, the multi-award winner was at pains as she narrated her concerns regarding black traditions and cultural practises.</p><p>“How is this (interview) going to help?” she asked. “It is not going to change my life because there is no interest in this kind of music in our country. Overseas people are more interested in it. White people like this music a lot. Some travelled from as far as Swirtzeland to learn about it.”</p><p>Madosini said the worst thing would be for the music to be completely wiped from South African borders and later return as something South Africans have to pay for. While she supports the need for people to be educated, she cautioned against extinction of black people’s culture. “The people who write down everything is the white people,” she said. “We had our way of doing things and survived. But all that is now going away. We are giving it away and the white people are taking it.”</p><p>While she was initially against relocating to Cape Town because of “thugs in urban areas”, she said the move was a blessing in disguise.</p><p>“It was not a mistake when God brought me here at an old age, he wanted other people to benefit,” she said. “Through me He brought bread to other people as well. The sad thing is when people eat that bread and not share with me. I don’t mind even if you get a loaf and give me a slice or you cook your meat and give me the gravy and tell me that the meat burnt up. I will eat.”</p><p>She said while she continued to rake in awards, very little went into her bank account. However, she was full of praises for Ms Dondolo.</p><p>“She has been so wonderful to me,” she said. “When I reached out to her, she listened and assisted me. Today we have children who have learnt this.”</p><p>Commenting on her relationship with Madosini, Ms Dondolo said she always appreciated her music. Despite all the challenges Madosini encountered in the industry, Ms Dondolo hailed her as the epitome of hope for many in the music industry. “She has gone through a rough patch in the music industry, but she has a very good heart, and she loves her music. Very few people value and love the industry the way she does. She is a gem. Even though we have children who have learnt her music, there is only one Madosini.”</p><p>Ms Dondolo said she would love to see more kids trained to play the music, but funding remains a challenge.</p>', NULL, 2, 0, 'no_image.png', 1, NULL);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_categories
+DROP TABLE IF EXISTS `news_categories`;
 CREATE TABLE IF NOT EXISTS `news_categories` (
   `cat_id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(100) DEFAULT NULL,
@@ -311,6 +322,7 @@ INSERT INTO `news_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 /*!40000 ALTER TABLE `news_categories` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_comments
+DROP TABLE IF EXISTS `news_comments`;
 CREATE TABLE IF NOT EXISTS `news_comments` (
   `com_id` int(10) NOT NULL AUTO_INCREMENT,
   `com_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -325,13 +337,14 @@ CREATE TABLE IF NOT EXISTS `news_comments` (
   CONSTRAINT `FK_news_comments_users` FOREIGN KEY (`com_ref_user`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table zibonale.news_comments: ~1 rows (approximately)
+-- Dumping data for table zibonale.news_comments: ~0 rows (approximately)
 /*!40000 ALTER TABLE `news_comments` DISABLE KEYS */;
 INSERT INTO `news_comments` (`com_id`, `com_date`, `com_ref_user`, `com_ref_news`, `comment`, `com_status`) VALUES
 	(1, '2017-09-19 09:24:18', 7, 12, 'ad', 1);
 /*!40000 ALTER TABLE `news_comments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_types
+DROP TABLE IF EXISTS `news_types`;
 CREATE TABLE IF NOT EXISTS `news_types` (
   `type_id` int(10) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(250) DEFAULT NULL,
@@ -348,6 +361,7 @@ INSERT INTO `news_types` (`type_id`, `type_name`, `type_description`, `type_icon
 /*!40000 ALTER TABLE `news_types` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.positions
+DROP TABLE IF EXISTS `positions`;
 CREATE TABLE IF NOT EXISTS `positions` (
   `pos_id` int(10) NOT NULL AUTO_INCREMENT,
   `pos_name` varchar(250) DEFAULT NULL,
@@ -363,6 +377,7 @@ INSERT INTO `positions` (`pos_id`, `pos_name`, `pos_description`) VALUES
 /*!40000 ALTER TABLE `positions` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.presenters
+DROP TABLE IF EXISTS `presenters`;
 CREATE TABLE IF NOT EXISTS `presenters` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_staff_id` int(10) DEFAULT NULL,
@@ -383,6 +398,7 @@ INSERT INTO `presenters` (`pr_id`, `ref_staff_id`) VALUES
 /*!40000 ALTER TABLE `presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.programs
+DROP TABLE IF EXISTS `programs`;
 CREATE TABLE IF NOT EXISTS `programs` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `pr_ref_broadcast` int(10) DEFAULT NULL,
@@ -410,6 +426,7 @@ INSERT INTO `programs` (`pr_id`, `pr_ref_broadcast`, `pr_ref_day`, `pr_ref_time`
 /*!40000 ALTER TABLE `programs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.services
+DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL,
@@ -429,6 +446,7 @@ INSERT INTO `services` (`id`, `title`, `desciption`, `more`, `icon`) VALUES
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.staffs
+DROP TABLE IF EXISTS `staffs`;
 CREATE TABLE IF NOT EXISTS `staffs` (
   `staff_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_user_id` int(10) DEFAULT NULL,
@@ -456,6 +474,7 @@ INSERT INTO `staffs` (`staff_id`, `ref_user_id`, `ref_position_id`, `ref_departm
 /*!40000 ALTER TABLE `staffs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.users
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_fullname` varchar(200) DEFAULT '',
@@ -493,6 +512,7 @@ INSERT INTO `users` (`user_id`, `user_fullname`, `user_lastname`, `user_name`, `
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.user_roles
+DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `role_id` int(10) NOT NULL AUTO_INCREMENT,
   `role_name` varchar(100) DEFAULT NULL,
