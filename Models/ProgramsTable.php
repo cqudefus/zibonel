@@ -23,7 +23,7 @@ class ProgramsTable extends AppTable
         *  @author berkaPhp
         */
 
-		$this->primary_key = 'pr_id';
+		$this->primary_key = 'id';
 
         $this->contains = [
             'broadcasts' => 'bc_id',

@@ -72,7 +72,7 @@
 				<div class="container v-center home-text">
 					<div class="row">
 						<div class="col-lg-6 col-md-8">
-							<h1 class="font-secondary banner-text">Hlala Nathi</h1>
+							<h1 class="font-secondary banner-text">Abasasazi </h1>
 							<h5 class="mb-40 text-muted"></h5>
 							<div class="row">
 								<div class="col-sm-6">
@@ -96,26 +96,27 @@
 	<h3>Latest News</h3>
 	<p class="lead mb-60">Latest News Around South Africa</p>
 </div>
-
-<?php foreach ($news as $data ): ?>
-    <div class="masonry-item col-md-4 col-sm-6 col-xs-12">
-        <div class="post post-boxed">
-            <div class="post-image">
-                <img style="border-radius:50%;" src="/Views/Default/Assets/News/<?= $data['image']== '0' ? 'no_image.png' : $data['image']?>" width="300px" alt="">
-            </div>
-            <ul class="post-meta">
-                <li><span>Added:</span><?=$data["published_date"]?></li>
-                <li><span>Author:</span><a href="#" class="text-capitalize"><?=$data["user_name"]?></a></li>
-                <li><span>Tags:</span><a href="#" class="text-capitalize"><?=$data["cat_name"]?></a></li>
-            </ul>
-            <div class="post-content">
-                <h2 data-equalize-height="news"><?=$data["title"]?></h2>
-                <p><?=berkaPhp\helpers\Str::limitChar($data["subtitle"], 120, '...')?></p>
-                <a href="/news/view/<?= $data['link'] ?>" class="btn btn-filled btn-sm btn-primary">Read more</a>
+<?php if(isset($news) && sizeof($news) > 0) :?>
+    <?php foreach ($news as $data ): ?>
+        <div class="masonry-item col-md-4 col-sm-6 col-xs-12">
+            <div class="post post-boxed">
+                <div class="post-image">
+                    <img style="border-radius:50%;" src="/Views/Default/Assets/News/<?= $data['image']?>" width="300px" alt="">
+                </div>
+                <ul class="post-meta">
+                    <li><span>Added:</span><?=$data["published_date"]?></li>
+                    <li><span>Author:</span><a href="#" class="text-capitalize"><?=$data["user_name"]?></a></li>
+                    <li><span>Tags:</span><a href="#" class="text-capitalize"><?=$data["cat_name"]?></a></li>
+                </ul>
+                <div class="post-content">
+                    <h2 data-equalize-height="news"><?=$data["title"]?></h2>
+                    <p><?=berkaPhp\helpers\Str::limitChar($data["subtitle"], 120, '...')?></p>
+                    <a href="/news/view/<?= $data['link'] ?>" class="btn btn-filled btn-sm btn-primary">Read more</a>
+                </div>
             </div>
         </div>
-    </div>
-<?php endforeach ?>
+    <?php endforeach ?>
+<?php endif ?>
 <script>
     zibonel.initEqualizer();
 </script>

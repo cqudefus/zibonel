@@ -64,9 +64,9 @@
                 <li class="has-dropdown">
                     <a href="/">On Air</a>
                     <ul>
-                        <!--<li class="">
-                            <a href="/programs">Line Up</a>
-                        </li>-->
+                        <li class="">
+                            <a href="/lineupschedule">Line Up</a>
+                        </li>
                         <li class="">
                             <a href="/presenters">Presenters</a>
                         </li>
@@ -81,36 +81,13 @@
                     <a href="/blog">Blog</a>
                 </li>
 
-               <!---<li class="">
-                    <a href="/events">Events</a>
-                </li>
-
                 <li class="">
                     <a href="/gallery">Gallery</a>
                 </li>
-               
-                <li class="">
-                    <a href="/gallery">Gallery</a>
-                </li>  -->
 
                 <li class="">
                     <a href="/contacts">Contact</a>
                 </li>
-                <!--
-                <li class="has-dropdown">
-                    <a href="">Other </a>
-                        <ul>
-                            <li class="">
-                                <a href="/programs">Advertisement</a>
-                            </li>
-
-                            <li class="">
-                                    <a href="/programs">Podcast</a>
-                            </li>
-                    </ul>
-                </li>
--->
-
 
 </ul>
 </div>

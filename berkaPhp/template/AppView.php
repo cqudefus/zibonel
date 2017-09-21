@@ -261,15 +261,10 @@ class AppView
         return $content;
     }
 
-    public function run_render($action) {
+    public function run_render($route = array(), $data = null) {
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
-        $view_to_render =  $action;
-        $called_controller =  $trace[count($trace) - 1]['class'];
-
-        $called_controller = str_replace('Controller','',$called_controller);
-        $called_controller = str_replace('controller','',$called_controller);
-        $called_controller = str_replace('\\','',$called_controller);
-        $called_controller = trim($called_controller);
+        $view_to_render = $route['action'];
+        $called_controller = $route['controller'];
 
         $title = $called_controller;
         $template_data = $this->data;
