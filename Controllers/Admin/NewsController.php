@@ -100,6 +100,40 @@
 			$this->appView->render();
 		}
 
-	}
+        function hide($params){
+
+            $id = $params['params'];
+
+            if (!empty($id)) {
+
+                if ($this->model->update(['id' => $id, 'hide' => 1])) {
+                    $this->appView->set('message', ['success' => 'New has been delete']);
+                } else {
+                    $this->appView->set('message', ['error' => ' Could not delete this new !']);
+                }
+
+            }
+
+            $this->index();
+        }
+
+        function activate($params){
+
+            $id = $params['params'];
+
+            if (!empty($id)) {
+
+                if ($this->model->update(['id' => $id, 'hide' => 0])) {
+                    $this->appView->set('message', ['success' => 'New Activated']);
+                } else {
+                    $this->appView->set('message', ['error' => ' Could not activate new !']);
+                }
+
+            }
+
+            $this->index();
+        }
+    }
+
 
 ?>

@@ -14,26 +14,36 @@
 		}
 
         function unauthorized() {
-            $this->appView->render();
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
+            $this->index("");
         }
 
         function no_found() {
-            $this->appView->render();
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
+            $this->index("");
         }
 
         function templatenotfound($params) {
 
             $details = $params['options'];
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
+
             $this->appView->set("details", $details);
-            $this->appView->render();
+            $this->index("");
 
         }
 
         function controllernotfound($params) {
 
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
+
             $details = $params['options'];
             $this->appView->set("details", $details);
-            $this->appView->render();
+            $this->index("");
 
         }
 
@@ -41,15 +51,20 @@
 
             $details = $params['options'];
            // $this->console($details);
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
+
             $this->appView->set("details", $details);
-            $this->appView->render();
+            $this->index("");
         }
 
         function modelnotfound($params) {
+            $this->appView->set('title', 'Error ');
+            $this->appView->set('page_title', 'Error');
 
             $details = $params['options'];
             $this->appView->set("details", $details);
-            $this->appView->render();
+            $this->index("");
         }
 
         function dbnotconnected() {

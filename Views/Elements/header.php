@@ -32,7 +32,7 @@
                     </li>
                 <?php endif ?>
                 <!--<li>Silapho Ukhoyo</li>-->
-                <a href="#" class="btn btn-xs btn-filled btn-danger">Listen Now <i class="fa fa-microphone"></i></a>
+                <a src="http://html5radio.svnlabs.com/html5shoutcast.php?radiolink=http://s32.myradiostream.com:5456/listen.pls&radiotype=shoutcast&bcolor=000003&image=shoutcast-icecast-html5-player-player.jpg&facebook=https://www.facebook.com/www.zibonelefmradio.co.za?fref=ts&twitter=https://twitter.com/radiozibonele&title=Radio Zibonele 98.2 FM&artist=Zibonele FM" class="btn btn-xs btn-filled btn-danger">Listen Now <i class="fa fa-microphone"></i></a>
             </ul>
         </div>
     </div>
@@ -65,7 +65,7 @@
                     <a href="/">On Air</a>
                     <ul>
                         <li class="">
-                            <a href="/programs">Line Up</a>
+                            <a href="/lineupschedule">Line Up</a>
                         </li>
                         <li class="">
                             <a href="/presenters">Presenters</a>
@@ -81,36 +81,13 @@
                     <a href="/blog">Blog</a>
                 </li>
 
-               <!---<li class="">
-                    <a href="/events">Events</a>
-                </li>
-
                 <li class="">
                     <a href="/gallery">Gallery</a>
                 </li>
-               
-                <li class="">
-                    <a href="/gallery">Gallery</a>
-                </li>  -->
 
                 <li class="">
                     <a href="/contacts">Contact</a>
                 </li>
-                <!--
-                <li class="has-dropdown">
-                    <a href="">Other </a>
-                        <ul>
-                            <li class="">
-                                <a href="/programs">Advertisement</a>
-                            </li>
-
-                            <li class="">
-                                    <a href="/programs">Podcast</a>
-                            </li>
-                    </ul>
-                </li>
--->
-
 
 </ul>
 </div>

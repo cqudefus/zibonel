@@ -7,7 +7,7 @@
 
                 <div class="row mb-50">
                     <div class="col-sm-6">
-                        <img src="/Views/Default/Assets/<?= $presenter['user_picture'] ?>"  alt="<?= $presenter['nickname'] ?>">
+                        <img src="/Views/Default/Assets/Presenters/<?= $presenter['user_picture'] ?>"  alt="<?= $presenter['nickname'] ?>">
                     </div>
                     <div class="col-sm-6">
                         <h2 class="text-spacing text-uppercase font-secondary mb-0"><?= $presenter['nickname'] ?></h2>

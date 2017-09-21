@@ -19,9 +19,9 @@
         <div class="post-comments post-module" data-news-id="<?=$data['id']?>">
 
         </div>
-        <?php if(\berkaPhp\helpers\Auth::isUserLogged()) :?>
-            <?= \berkaPhp\helpers\Element::load('AddComment', "",$data['id']) ?>
-        <?php endif ?>
+<!--        --><?php //if(\berkaPhp\helpers\Auth::isUserLogged()) :?>
+<!--            --><?//= \berkaPhp\helpers\Element::load('AddComment', "",$data['id']) ?>
+<!--        --><?php //endif ?>
     </div>
 </div>
 <div class="sidebar news-view col-md-3">

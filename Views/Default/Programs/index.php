@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12 ">
                         <div class="product-image">
-                            <img src="/Views/Default/Assets/podcasts.png" class="img-responsive">
+                            <img src="/Views/Default/Assets/Programs/podcasts.png" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-12 col-xs-12">
