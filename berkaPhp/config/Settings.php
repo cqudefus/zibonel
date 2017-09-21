@@ -5,9 +5,9 @@
 
     //Database settings
     define('SERVER', '127.0.0.1', true);
-    define('DB', 'djzxpeck_zibonele', true);
-    define('DB_USERNAME', 'djzxpeck_zibonel', true);
-    define('DB_PW', $_SERVER['SERVER_NAME']=='www.zibonelefm.co.za' ? 'zibonele12345' : 'zibonele12345', true);
+    define('DB', 'zibonale', true);
+    define('DB_USERNAME', 'root', true);
+    define('DB_PW', $_SERVER['SERVER_NAME']=='www.zibonelefm.co.za' ? '' : '', true);
 
     //default controller
     define('HOME', 'pages' , true);
