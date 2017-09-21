@@ -10,7 +10,7 @@
                 
                      <div class="col-sm-3">
             <div class="image-box image-hover text-center">
-                <div class="image">
+                <div class="image" style="border-radius: 10px;">
                     <a href="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" data-lightbox="gallery" data-title="<?=$data["image_heading"]?>"><img src="/Views/Default/Assets/Gallery/<?=$data["image_file"]?>" alt=""></a>
                 </div>
                 <div class="title">
