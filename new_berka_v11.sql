@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.1.13-MariaDB - mariadb.org binary distribution
+-- Server version:               5.7.9 - MySQL Community Server (GPL)
 -- Server OS:                    Win64
 -- HeidiSQL Version:             9.4.0.5125
 -- --------------------------------------------------------
@@ -13,12 +13,10 @@
 
 
 -- Dumping database structure for zibonale
-DROP DATABASE IF EXISTS `zibonale`;
 CREATE DATABASE IF NOT EXISTS `zibonale` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `zibonale`;
 
 -- Dumping structure for table zibonale.about_us
-DROP TABLE IF EXISTS `about_us`;
 CREATE TABLE IF NOT EXISTS `about_us` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
@@ -36,7 +34,6 @@ INSERT INTO `about_us` (`id`, `title`, `description`, `vision`, `mission`, `bann
 /*!40000 ALTER TABLE `about_us` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcasts
-DROP TABLE IF EXISTS `broadcasts`;
 CREATE TABLE IF NOT EXISTS `broadcasts` (
   `bc_id` int(10) NOT NULL AUTO_INCREMENT,
   `bc_name` varchar(250) DEFAULT NULL,
@@ -61,7 +58,6 @@ INSERT INTO `broadcasts` (`bc_id`, `bc_name`, `bc_description`, `bc_icon`) VALUE
 /*!40000 ALTER TABLE `broadcasts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_days
-DROP TABLE IF EXISTS `broadcast_days`;
 CREATE TABLE IF NOT EXISTS `broadcast_days` (
   `bcd_id` int(10) NOT NULL AUTO_INCREMENT,
   `bcd_name` varchar(250) DEFAULT NULL,
@@ -85,7 +81,6 @@ INSERT INTO `broadcast_days` (`bcd_id`, `bcd_name`, `bcd_from`, `bcd_to`, `bcd_d
 /*!40000 ALTER TABLE `broadcast_days` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_presenters
-DROP TABLE IF EXISTS `broadcast_presenters`;
 CREATE TABLE IF NOT EXISTS `broadcast_presenters` (
   `bp_id` int(10) NOT NULL AUTO_INCREMENT,
   `bp_ref_bc` int(10) DEFAULT NULL,
@@ -112,7 +107,6 @@ INSERT INTO `broadcast_presenters` (`bp_id`, `bp_ref_bc`, `bp_ref_pres`) VALUES
 /*!40000 ALTER TABLE `broadcast_presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.broadcast_times
-DROP TABLE IF EXISTS `broadcast_times`;
 CREATE TABLE IF NOT EXISTS `broadcast_times` (
   `bct_id` int(10) NOT NULL AUTO_INCREMENT,
   `bct_name` varchar(250) DEFAULT NULL,
@@ -140,7 +134,6 @@ INSERT INTO `broadcast_times` (`bct_id`, `bct_name`, `bct_from`, `bct_to`, `bct_
 /*!40000 ALTER TABLE `broadcast_times` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.contacts
-DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `cellphone` varchar(50) DEFAULT NULL,
@@ -164,7 +157,6 @@ INSERT INTO `contacts` (`id`, `cellphone`, `tell`, `email`, `street_name`, `subu
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.departments
-DROP TABLE IF EXISTS `departments`;
 CREATE TABLE IF NOT EXISTS `departments` (
   `dep_id` int(10) NOT NULL AUTO_INCREMENT,
   `dep_name` varchar(500) DEFAULT NULL,
@@ -180,7 +172,6 @@ INSERT INTO `departments` (`dep_id`, `dep_name`, `dep_description`) VALUES
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.gallery
-DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE IF NOT EXISTS `gallery` (
   `id` int(10) NOT NULL,
   `image_file` varchar(100) DEFAULT NULL,
@@ -192,33 +183,32 @@ CREATE TABLE IF NOT EXISTS `gallery` (
 -- Dumping data for table zibonale.gallery: ~23 rows (approximately)
 /*!40000 ALTER TABLE `gallery` DISABLE KEYS */;
 INSERT INTO `gallery` (`id`, `image_file`, `image_heading`, `image_description`) VALUES
-	(0, '1.jpg', 'Mandela Day 2017', 'At Manyano High School'),
-	(1, '2.jpg', 'Youth Debate', 'Getting the Youth together'),
-	(2, '3.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(3, '4.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
-	(4, '5.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(5, '6.jpg', 'Mandela Day 2017', 'At Manyano High School'),
-	(6, '7.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(7, '8.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
-	(8, '9.jpg', 'Youth Debate', 'Getting the Youth together'),
-	(9, '10.jpg', 'Mandela Day 2017', 'At Manyano High School'),
-	(10, '11.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(11, '12.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(12, '13.jpg', 'Youth Debate', 'Getting the Youth together'),
-	(13, '14.jpg', 'Youth Debate', 'Getting the Youth together'),
-	(14, '15.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
-	(15, '16.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(16, '17.jpg', 'Youth Debate', 'Getting the Youth together'),
-	(17, '18.jpg', 'Mandela Day 2017', 'At Manyano High School'),
-	(18, '19.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
-	(19, '20.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(20, '21.jpg', 'Youth Debate', 'Getting the Youth talk about their surrondings '),
-	(21, '22.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
-	(22, '23.jpg', 'Gospel Event', 'Thoba isandla sakho yehova');
+	(101, '21.jpg', 'Youth Debate', 'Getting the Youth talk about '),
+	(102, '2.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(103, '9.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(104, '13.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(105, '14.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(106, '17.jpg', 'Youth Debate', 'Getting the Youth together'),
+	(107, '4.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(108, '8.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(109, '15.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(110, '19.jpg', 'Vodacom Mandela Day', 'Vodacom Mandela Day gifts packing'),
+	(111, '1.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(112, '6.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(113, '10.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(114, '18.jpg', 'Mandela Day 2017', 'At Manyano High School'),
+	(115, '3.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(116, '5.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(117, '7.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(118, '11.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(119, '12.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(120, '16.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(121, '20.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(122, '22.jpg', 'Gospel Event', 'Thoba isandla sakho yehova'),
+	(123, '23.jpg', 'Gospel Event', 'Thoba isandla sakho yehova');
 /*!40000 ALTER TABLE `gallery` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.lineupschedule
-DROP TABLE IF EXISTS `lineupschedule`;
 CREATE TABLE IF NOT EXISTS `lineupschedule` (
   `id` int(10) NOT NULL,
   `program_name` varchar(100) NOT NULL,
@@ -275,7 +265,6 @@ INSERT INTO `lineupschedule` (`id`, `program_name`, `program_day_schedule`, `pro
 /*!40000 ALTER TABLE `lineupschedule` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news
-DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ref_cat` int(10) NOT NULL DEFAULT '1',
@@ -307,7 +296,6 @@ INSERT INTO `news` (`id`, `ref_cat`, `title`, `subtitle`, `published_date`, `lin
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_categories
-DROP TABLE IF EXISTS `news_categories`;
 CREATE TABLE IF NOT EXISTS `news_categories` (
   `cat_id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(100) DEFAULT NULL,
@@ -322,7 +310,6 @@ INSERT INTO `news_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 /*!40000 ALTER TABLE `news_categories` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_comments
-DROP TABLE IF EXISTS `news_comments`;
 CREATE TABLE IF NOT EXISTS `news_comments` (
   `com_id` int(10) NOT NULL AUTO_INCREMENT,
   `com_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -335,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `news_comments` (
   KEY `FK_news_comments_news` (`com_ref_news`),
   CONSTRAINT `FK_news_comments_news` FOREIGN KEY (`com_ref_news`) REFERENCES `news` (`id`),
   CONSTRAINT `FK_news_comments_users` FOREIGN KEY (`com_ref_user`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table zibonale.news_comments: ~0 rows (approximately)
 /*!40000 ALTER TABLE `news_comments` DISABLE KEYS */;
@@ -344,7 +331,6 @@ INSERT INTO `news_comments` (`com_id`, `com_date`, `com_ref_user`, `com_ref_news
 /*!40000 ALTER TABLE `news_comments` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.news_types
-DROP TABLE IF EXISTS `news_types`;
 CREATE TABLE IF NOT EXISTS `news_types` (
   `type_id` int(10) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(250) DEFAULT NULL,
@@ -361,7 +347,6 @@ INSERT INTO `news_types` (`type_id`, `type_name`, `type_description`, `type_icon
 /*!40000 ALTER TABLE `news_types` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.positions
-DROP TABLE IF EXISTS `positions`;
 CREATE TABLE IF NOT EXISTS `positions` (
   `pos_id` int(10) NOT NULL AUTO_INCREMENT,
   `pos_name` varchar(250) DEFAULT NULL,
@@ -377,7 +362,6 @@ INSERT INTO `positions` (`pos_id`, `pos_name`, `pos_description`) VALUES
 /*!40000 ALTER TABLE `positions` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.presenters
-DROP TABLE IF EXISTS `presenters`;
 CREATE TABLE IF NOT EXISTS `presenters` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_staff_id` int(10) DEFAULT NULL,
@@ -398,7 +382,6 @@ INSERT INTO `presenters` (`pr_id`, `ref_staff_id`) VALUES
 /*!40000 ALTER TABLE `presenters` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.programs
-DROP TABLE IF EXISTS `programs`;
 CREATE TABLE IF NOT EXISTS `programs` (
   `pr_id` int(10) NOT NULL AUTO_INCREMENT,
   `pr_ref_broadcast` int(10) DEFAULT NULL,
@@ -426,7 +409,6 @@ INSERT INTO `programs` (`pr_id`, `pr_ref_broadcast`, `pr_ref_day`, `pr_ref_time`
 /*!40000 ALTER TABLE `programs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.services
-DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL,
@@ -446,7 +428,6 @@ INSERT INTO `services` (`id`, `title`, `desciption`, `more`, `icon`) VALUES
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.staffs
-DROP TABLE IF EXISTS `staffs`;
 CREATE TABLE IF NOT EXISTS `staffs` (
   `staff_id` int(10) NOT NULL AUTO_INCREMENT,
   `ref_user_id` int(10) DEFAULT NULL,
@@ -474,7 +455,6 @@ INSERT INTO `staffs` (`staff_id`, `ref_user_id`, `ref_position_id`, `ref_departm
 /*!40000 ALTER TABLE `staffs` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_fullname` varchar(200) DEFAULT '',
@@ -512,7 +492,6 @@ INSERT INTO `users` (`user_id`, `user_fullname`, `user_lastname`, `user_name`, `
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table zibonale.user_roles
-DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `role_id` int(10) NOT NULL AUTO_INCREMENT,
   `role_name` varchar(100) DEFAULT NULL,
