@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-6">
-        <div><img src="/Views/Default/Assets/img/photos/jara.jpg" alt="" style="border-radius: 5px;"></div>
+        <div><img src="/Views/Default/Assets/img/photos/RadioZiboneleLogo.png" alt="" style="border-radius: 5px;"></div>
     </div>
 
 <?php endforeach ?>
