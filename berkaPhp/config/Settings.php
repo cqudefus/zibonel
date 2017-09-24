@@ -7,7 +7,7 @@
     define('SERVER', '127.0.0.1', true);
     define('DB', 'zibonale', true);
     define('DB_USERNAME', 'root', true);
-    define('DB_PW', $_SERVER['SERVER_NAME']=='www.zibonelefm.co.za' ? '' : '', true);
+    define('DB_PW', $_SERVER['SERVER_NAME']=='www.zibonelefm.co.za' ? 'Brk1991@' : '', true);
 
     //default controller
     define('HOME', 'pages' , true);
