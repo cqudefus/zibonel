@@ -32,7 +32,7 @@
                     </li>
                 <?php endif ?>
                 <!--<li>Silapho Ukhoyo</li>-->
-                <a src="http://html5radio.svnlabs.com/html5shoutcast.php?radiolink=http://s32.myradiostream.com:5456/listen.pls&radiotype=shoutcast&bcolor=000003&image=shoutcast-icecast-html5-player-player.jpg&facebook=https://www.facebook.com/www.zibonelefmradio.co.za?fref=ts&twitter=https://twitter.com/radiozibonele&title=Radio Zibonele 98.2 FM&artist=Zibonele FM" class="btn btn-xs btn-filled btn-danger">Listen Now <i class="fa fa-microphone"></i></a>
+                <a href="http://html5radio.svnlabs.com/html5shoutcast.php?radiolink=http://s32.myradiostream.com:5456/listen.pls&radiotype=shoutcast&bcolor=000003&image=shoutcast-icecast-html5-player-player.jpg&facebook=https://www.facebook.com/www.zibonelefmradio.co.za?fref=ts&twitter=https://twitter.com/radiozibonele&title=Radio Zibonele 98.2 FM&artist=Zibonele FM" src="http://html5radio.svnlabs.com/html5shoutcast.php?radiolink=http://s32.myradiostream.com:5456/listen.pls&radiotype=shoutcast&bcolor=000003&image=shoutcast-icecast-html5-player-player.jpg&facebook=https://www.facebook.com/www.zibonelefmradio.co.za?fref=ts&twitter=https://twitter.com/radiozibonele&title=Radio Zibonele 98.2 FM&artist=Zibonele FM" data-listen-now = "false" class="btn btn-xs btn-filled btn-danger">Listen Now <i class="fa fa-microphone"></i></a>
             </ul>
         </div>
     </div>

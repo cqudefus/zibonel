@@ -125,7 +125,5 @@
 <!-- Content / End -->
 
 <!-- Footer -->
-<script>
-	$app.initList(); 
-</script>
+
 
