@@ -23,6 +23,7 @@
 <script>
     $app.initBerkaPhp();
     zibonel.initLiveProgram();
+    zibonel.initRadio();
 </script>
 
 </body>

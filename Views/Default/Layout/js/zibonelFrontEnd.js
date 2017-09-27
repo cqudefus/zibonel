@@ -107,3 +107,11 @@ zibonel.initAddComment = function() {
     });
 
 };
+
+zibonel.initRadio = function() {
+
+    listenNowBtn = $('[data-listen-now]');
+
+
+}
+
